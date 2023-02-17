@@ -1,1 +1,1 @@
-Poshnagov Grigoriy PS-11 лох
+Poshnagov Grigoriy PS-11 
