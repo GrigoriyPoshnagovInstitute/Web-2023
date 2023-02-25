@@ -129,4 +129,37 @@
 .most_recent_post
 {
     background: rgba(255, 255, 255, 1);
+    width: 296px;
+    height: 291px;
+}
+
+.most_recent_title
+{
+    font-family: 'Lora', serif;
+    font-size: 16px;
+    color:rgba(16, 19, 21, 1);
+}
+
+.text_of_most_recent_post
+{
+    font-family: 'Oxygen', sans-serif;
+    font-size: 13px;
+    color:rgba(122, 122, 122, 1); 
+}
+
+.most_recent_info
+{
+    background: rgba(252, 252, 252, 1);
+    width: 296px;
+    height: 48px;
+    border-width: 1px 0px 0px 0px;
+    border-style: solid;
+    border-color: rgba(239, 239, 239, 1);
+}
+
+.most_recent_info__text
+{
+    font-family: 'Oxygen', sans-serif;
+    font-size: 11px;
+    color:rgba(153, 153, 153, 1); 
 }
