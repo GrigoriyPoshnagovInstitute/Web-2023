@@ -17,8 +17,8 @@
 {
     text-decoration: none;
     font-family: 'Oxygen', sans-serif;
-    font-size: 12px;
-    color:#FFFFFF;
+    font-size: 11px;
+    color:rgba(255, 255, 255, 0.6);
 }
 
 .slogan
@@ -162,4 +162,25 @@
     font-family: 'Oxygen', sans-serif;
     font-size: 11px;
     color:rgba(153, 153, 153, 1); 
+}
+
+.image_scale
+{
+    width: 296px;
+    height: 150px;
+}
+
+.end
+{
+    width: 1440px;
+    height: 89px;
+    background-image: url("village.jpg");
+    background-size: cover;
+}
+
+.overlay
+{
+    background-color: rgba(35, 47, 56, 0.6);
+    width: 1440px;
+    height: 89px;
 }
