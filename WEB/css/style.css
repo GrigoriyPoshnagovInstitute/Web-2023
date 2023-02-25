@@ -13,12 +13,27 @@
     color: #FFFFFF;
 }
 
+.escape_the_road_ahead
+{
+    font-family: 'Lora', serif;
+    font-size: 26px;
+    color: rgba(46, 46, 46, 1);
+}
+
 .navigation
 {
     text-decoration: none;
     font-family: 'Oxygen', sans-serif;
     font-size: 11px;
     color:rgba(255, 255, 255, 0.6);
+}
+
+.navigation_the_road_ahead
+{
+    text-decoration: none;
+    font-family: 'Oxygen', sans-serif;
+    font-size: 11px;
+    color:rgba(46, 46, 46, 1);
 }
 
 .slogan
@@ -29,11 +44,26 @@
     font-weight: 400;
 }
 
+.slogan_the_road_ahead
+{
+    font-family: 'Lora', serif;
+    font-size: 50px;
+    color:rgba(46, 46, 46, 1);
+    font-weight: 400;
+}
+
 .small_slogan
 {
     font-family: 'Oxygen', sans-serif;
     font-size: 17;
     color:rgba(255, 255, 255, 0.63);    
+}
+
+.small_slogan_the_road_ahead
+{
+    font-family: 'Oxygen', sans-serif;
+    font-size: 17;
+    color:rgba(46, 46, 46, 0.63);  
 }
 
 .view_button
@@ -73,7 +103,11 @@
     font-weight: 400;
     font-family: 'Oxygen', sans-serif;
     font-size: 20px;  
-    color:rgba(46, 46, 46, 1); 
+    color:rgba(46, 46, 46, 1);
+    border-width: 0px 0px 1px 0px;
+    border-style: solid;
+    border-color: rgba(222, 222, 222, 1); 
+    width: 188px;
 }
 
 .The_Road_Ahead_Post
@@ -183,4 +217,19 @@
     background-color: rgba(35, 47, 56, 0.6);
     width: 1440px;
     height: 89px;
+}
+
+.scale_the_road_ahead
+{
+    width: 1440px;
+    height: 534px;
+}
+
+.text_the_road_ahead
+{
+    width: 960px;
+    height: 1431px;
+    font-family: 'Oxygen', sans-serif;
+    font-size: 24px;
+    color:rgba(16, 19, 21, 1); 
 }
