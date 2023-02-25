@@ -1,0 +1,15 @@
+.title
+{
+    
+    background-image: url("background.png");
+    height: 500px;
+    width: 1440px;
+
+}
+
+.escape
+{
+    font-family: 'Lora', serif;
+    font-size: 26px;
+    color: #FFFFFF;
+}
