@@ -1,6 +1,6 @@
 .title
 {
-   
+    background: rgba(247, 247, 247, 1);
     background-image: url("background.png");
     height: 500px;
     width: 1440px;
@@ -46,4 +46,87 @@
     width: 167px;
     height: 44px;
     border-radius: 3px;  
+}
+
+.categories
+{
+    background: rgba(255, 255, 255);
+    height: 65px;
+    width: 1440px;
+}
+
+.categories__elem
+{
+    text-decoration: none;
+    font-family: 'Lora', serif;
+    font-size: 14px;
+    color:rgba(118, 128, 136, 1);
+}
+
+.main
+{
+    background: rgba(247, 247, 247, 1);
+}
+
+.posts_title
+{
+    font-weight: 400;
+    font-family: 'Oxygen', sans-serif;
+    font-size: 20px;  
+    color:rgba(46, 46, 46, 1); 
+}
+
+.The_Road_Ahead_Post
+{
+    background-image: url("background_of_the_road_ahead.png");
+    height: 280px;
+    width: 460px;
+    border-radius: 3px;
+    background-size: cover;
+}
+
+.title_of_feature_post
+{
+    font-family: 'Lora', serif;
+    font-size: 27px;
+    color:rgba(255, 255, 255, 1);
+    font-weight: 400; 
+}
+.text_of_feature_post
+{
+    font-family: 'Oxygen', sans-serif;
+    font-size: 14px;
+    color:rgba(255, 255, 255, 0.7);  
+}
+
+.info_about_feature_post
+{
+    font-family: 'Oxygen', sans-serif;
+    font-size: 12px;
+    color:rgba(255, 255, 255, 0.7); 
+}
+
+.adventure_splash
+{
+    background: rgba(221, 120, 63, 1);
+    width: 87px;
+    height: 26px;
+    border-radius: 2px; 
+    font-family: 'Oxygen', sans-serif;
+    font-size: 12px;
+    color:#FFFFFF;
+}
+
+.From_Top_To_Down_Post
+{
+    background-image: url("background_of_from_top_to_down.png");
+    height: 280px;
+    width: 460px;
+    border-radius: 3px;
+    background-size: cover;
+}
+
+.most_recent_post
+{
+    background: rgba(255, 255, 255, 1);
 }
