@@ -110,7 +110,7 @@
     width: 188px;
 }
 
-.The_Road_Ahead_Post
+.main__feature_posts__The_Road_Ahead
 {
     background-image: url("background_of_the_road_ahead.png");
     height: 280px;
@@ -119,21 +119,21 @@
     background-size: cover;
 }
 
-.title_of_feature_post
+.feature_posts__title
 {
     font-family: 'Lora', serif;
     font-size: 27px;
     color:rgba(255, 255, 255, 1);
     font-weight: 400; 
 }
-.text_of_feature_post
+.feature_post__text
 {
     font-family: 'Oxygen', sans-serif;
     font-size: 14px;
     color:rgba(255, 255, 255, 0.7);  
 }
 
-.info_about_feature_post
+.feature_post__info
 {
     font-family: 'Oxygen', sans-serif;
     font-size: 12px;
@@ -151,7 +151,7 @@
     color:#FFFFFF;
 }
 
-.From_Top_To_Down_Post
+.main__feature_posts__From_Top_To_Down
 {
     background-image: url("background_of_from_top_to_down.png");
     height: 280px;
@@ -181,7 +181,7 @@
     color:rgba(122, 122, 122, 1); 
 }
 
-.most_recent_info
+.most_recent_post__info
 {
     background: rgba(252, 252, 252, 1);
     width: 296px;
@@ -191,7 +191,7 @@
     border-color: rgba(239, 239, 239, 1);
 }
 
-.most_recent_info__text
+.most_recent_post__info__text
 {
     font-family: 'Oxygen', sans-serif;
     font-size: 11px;
@@ -232,4 +232,14 @@
     font-family: 'Oxygen', sans-serif;
     font-size: 24px;
     color:rgba(16, 19, 21, 1); 
+}
+
+.main__feature_posts
+{
+
+}
+
+.main__most_recent_posts
+{
+
 }
