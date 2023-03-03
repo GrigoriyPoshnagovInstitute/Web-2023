@@ -3,7 +3,7 @@
     background: rgba(247, 247, 247, 1);
     background-image: url("background.png");
     height: 500px;
-    width: 1440px;
+    background-size: cover;
 }
 
 .escape
@@ -140,7 +140,7 @@
     color:rgba(255, 255, 255, 0.7); 
 }
 
-.adventure_splash
+.From_Top_To_Down_Post__adventure_splash
 {
     background: rgba(221, 120, 63, 1);
     width: 87px;
@@ -167,14 +167,14 @@
     height: 291px;
 }
 
-.most_recent_title
+.most_recent_post__title
 {
     font-family: 'Lora', serif;
     font-size: 16px;
     color:rgba(16, 19, 21, 1);
 }
 
-.text_of_most_recent_post
+.most_recent_post__text
 {
     font-family: 'Oxygen', sans-serif;
     font-size: 13px;
@@ -198,7 +198,7 @@
     color:rgba(153, 153, 153, 1); 
 }
 
-.image_scale
+.most_recent_post__image
 {
     width: 296px;
     height: 150px;
@@ -206,7 +206,7 @@
 
 .end
 {
-    width: 1440px;
+    background-size: cover;
     height: 89px;
     background-image: url("village.jpg");
     background-size: cover;
@@ -215,7 +215,7 @@
 .overlay
 {
     background-color: rgba(35, 47, 56, 0.6);
-    width: 1440px;
+    background-size: cover;
     height: 89px;
 }
 
