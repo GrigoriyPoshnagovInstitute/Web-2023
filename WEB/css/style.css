@@ -10,7 +10,16 @@
 {
     font-family: 'Lora', serif;
     font-size: 26px;
+}
+
+.escape_white
+{
     color: #FFFFFF;
+}
+
+.escape_gray
+{
+    color: #2E2E2E;
 }
 
 .navigation
@@ -18,7 +27,16 @@
     text-decoration: none;
     font-family: 'Oxygen', sans-serif;
     font-size: 11px;
-    color:rgba(255, 255, 255, 0.6);
+}
+
+.navigation_white
+{
+    color: #FFFFFF;
+}
+
+.navigation_gray
+{
+    color: #2E2E2E;
 }
 
 .slogan
@@ -29,11 +47,30 @@
     font-weight: 400;
 }
 
-.small_slogan
+.slogan_white
+{
+    color:#FFFFFF;
+}
+
+.slogan_gray
+{
+    color:#2E2E2E;
+}
+
+.subtitle
 {
     font-family: 'Oxygen', sans-serif;
-    font-size: 17;
+    font-size: 17; 
+}
+
+.subtitle_white
+{
     color:rgba(255, 255, 255, 0.63);    
+}
+
+.subtitle_gray
+{
+    color:rgba(46, 46, 46, 0.63);    
 }
 
 .view_button
@@ -204,3 +241,17 @@
     height: 89px;
 }
 
+.the_road_ahead_image
+{
+    background-size: cover;
+    height: 534px;
+}
+
+.the_road_ahead_text
+{
+    width: 960px;
+    height: 1431px;
+    font-family: 'Oxygen', sans-serif;
+    font-size: 24px;
+    color:rgba(16, 19, 21, 1); 
+}
