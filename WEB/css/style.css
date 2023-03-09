@@ -1,4 +1,4 @@
-.title
+.welcome
 {
     background: rgba(247, 247, 247, 1);
     background-image: url("background.png");
@@ -13,27 +13,12 @@
     color: #FFFFFF;
 }
 
-.escape_the_road_ahead
-{
-    font-family: 'Lora', serif;
-    font-size: 26px;
-    color: rgba(46, 46, 46, 1);
-}
-
 .navigation
 {
     text-decoration: none;
     font-family: 'Oxygen', sans-serif;
     font-size: 11px;
     color:rgba(255, 255, 255, 0.6);
-}
-
-.navigation_the_road_ahead
-{
-    text-decoration: none;
-    font-family: 'Oxygen', sans-serif;
-    font-size: 11px;
-    color:rgba(46, 46, 46, 1);
 }
 
 .slogan
@@ -44,26 +29,11 @@
     font-weight: 400;
 }
 
-.slogan_the_road_ahead
-{
-    font-family: 'Lora', serif;
-    font-size: 50px;
-    color:rgba(46, 46, 46, 1);
-    font-weight: 400;
-}
-
 .small_slogan
 {
     font-family: 'Oxygen', sans-serif;
     font-size: 17;
     color:rgba(255, 255, 255, 0.63);    
-}
-
-.small_slogan_the_road_ahead
-{
-    font-family: 'Oxygen', sans-serif;
-    font-size: 17;
-    color:rgba(46, 46, 46, 0.63);  
 }
 
 .view_button
@@ -110,37 +80,54 @@
     width: 188px;
 }
 
-.main__feature_posts__The_Road_Ahead
-{
-    background-image: url("background_of_the_road_ahead.png");
+.featured_post
+{  
     height: 280px;
     width: 460px;
     border-radius: 3px;
     background-size: cover;
 }
 
-.feature_posts__title
+.featured_post_TheRoadAhead
+{
+    background-image: url("background_of_the_road_ahead.png");  
+}
+
+.featured_post_FromTopToDown
+{
+    background-image: url("background_of_from_top_to_down.png");    
+}
+
+.featured_post__title
 {
     font-family: 'Lora', serif;
     font-size: 27px;
     color:rgba(255, 255, 255, 1);
-    font-weight: 400; 
+    font-weight: 400;     
 }
-.feature_post__text
+
+.featured_post__text
 {
     font-family: 'Oxygen', sans-serif;
     font-size: 14px;
     color:rgba(255, 255, 255, 0.7);  
 }
 
-.feature_post__info
+.featured_post__name
 {
     font-family: 'Oxygen', sans-serif;
     font-size: 12px;
     color:rgba(255, 255, 255, 0.7); 
 }
 
-.From_Top_To_Down_Post__adventure_splash
+.featured_post__date
+{
+    font-family: 'Oxygen', sans-serif;
+    font-size: 12px;
+    color:rgba(255, 255, 255, 0.7); 
+}
+
+.featured_post__splash
 {
     background: rgba(221, 120, 63, 1);
     width: 87px;
@@ -149,15 +136,6 @@
     font-family: 'Oxygen', sans-serif;
     font-size: 12px;
     color:#FFFFFF;
-}
-
-.main__feature_posts__From_Top_To_Down
-{
-    background-image: url("background_of_from_top_to_down.png");
-    height: 280px;
-    width: 460px;
-    border-radius: 3px;
-    background-size: cover;
 }
 
 .most_recent_post
@@ -172,6 +150,12 @@
     font-family: 'Lora', serif;
     font-size: 16px;
     color:rgba(16, 19, 21, 1);
+}
+
+.most_recent_post__image
+{
+    width: 296px;
+    height: 150px;
 }
 
 .most_recent_post__text
@@ -191,20 +175,21 @@
     border-color: rgba(239, 239, 239, 1);
 }
 
-.most_recent_post__info__text
+.most_recent_post__name
 {
     font-family: 'Oxygen', sans-serif;
     font-size: 11px;
     color:rgba(153, 153, 153, 1); 
 }
 
-.most_recent_post__image
+.most_recent_post__date
 {
-    width: 296px;
-    height: 150px;
+    font-family: 'Oxygen', sans-serif;
+    font-size: 11px;
+    color:rgba(153, 153, 153, 1); 
 }
 
-.end
+.basement
 {
     background-size: cover;
     height: 89px;
@@ -219,27 +204,3 @@
     height: 89px;
 }
 
-.scale_the_road_ahead
-{
-    width: 1440px;
-    height: 534px;
-}
-
-.text_the_road_ahead
-{
-    width: 960px;
-    height: 1431px;
-    font-family: 'Oxygen', sans-serif;
-    font-size: 24px;
-    color:rgba(16, 19, 21, 1); 
-}
-
-.main__feature_posts
-{
-
-}
-
-.main__most_recent_posts
-{
-
-}
