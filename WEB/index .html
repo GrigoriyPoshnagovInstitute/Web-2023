@@ -8,19 +8,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Lora&family=Oxygen&display=swap" rel="stylesheet">
   </head>
   <body>
-    <header>
-      <span class="escape escape_white">Escape.</span>
-      <nav>
-        <a href="ссылка" class="navigation navigation_white">HOME</a>
-        <a href="ссылка" class="navigation navigation_white">CATEGORIES</a>
-        <a href="ссылка" class="navigation navigation_white">ABOUT</a>
-        <a href="ссылка" class="navigation navigation_white">CONTACT</a>
+    <header class="heading">
+      <span class="heading__escape heading__escape_color_white">Escape.</span>
+      <nav class="navigation">
+        <a href="ссылка" class="navigation__link navigation__link_color_white">HOME</a>
+        <a href="ссылка" class="navigation__link navigation__link_color_white">CATEGORIES</a>
+        <a href="ссылка" class="navigation__link navigation__link_color_white">ABOUT</a>
+        <a href="ссылка" class="navigation__link navigation__link_color_white">CONTACT</a>
       </nav>
     </header>
-    <div class="welcome">
-      <h1 class="slogan">Let's do it together</h1>
-      <span class="subtitle subtitle_white">We travel the world in search of stories. Come along for the ride.</span>
-      <button type="button" class="view_button">View Latest Posts</button>
+    <div class="welcome-sheet welcome-sheet_background">
+      <h1 class="welcome-sheet__slogan welcome-sheet__slogan_color_white">Let's do it together</h1>
+      <span class="welcome-sheet__subtitle welcome-sheet__subtitle_color_white">We travel the world in search of stories. Come along for the ride.</span>
+      <button type="button" class="welcome-sheet__view_button">View Latest Posts</button>
     </div>
     <div class="categories">
       <a href="ссылка" class="categories__elem">Nature</a>
@@ -30,17 +30,16 @@
       <a href="ссылка" class="categories__elem">Travel</a>
       <a href="ссылка" class="categories__elem">Adventure</a>
     </div>  
-    </div>
     <div class="main">
-      <div>
-        <h2 class="posts_title">Featured Posts</h2>
+      <div class="featured posts">
+        <h2 class="featured_posts__title">Featured Posts</h2>
         <div class="featured_post featured_post_TheRoadAhead">
           <h3 class="featured_post__title">The Road Ahead</h3>
-          <p class="featured_post__text">
+          <p class="featured_post__description">
             The road ahead might be paved - it might not be.
           </p>
           <img src="images/Mat_Vogels.png" alt="Mat_Vogels"/>
-          <span class="featured_post__name">Mat Vogels</span>
+          <span class="featured_post__author">Mat Vogels</span>
           <span class="featured_post__date">September 25, 2015</span>      
         </div>
         <div class="featured_post featured_post_FromTopToDown">
@@ -48,98 +47,98 @@
             <span>ADVENTURE</span>
           </div>
           <h3 class="featured_post__title">From Top Down</h3>
-          <p class="featured_post__text">
+          <p class="featured_post__description">
             Once a year, go someplace you’ve never been before.
           </p>
           <img src="images/William_Wong.png" alt="William_Wong"/>
-          <span class="featured_post__name"> William Wong </span>
+          <span class="featured_post__author"> William Wong </span>
           <span class="featured_post__date">September 25, 2015</span>
         </div>
       </div>
-      <div>
-        <h2 class="posts_title">Most Recent</h2>
+      <div class="most_recent_posts">
+        <h2 class="most_recent_posts__title">Most Recent</h2>
         <div class="most_recent_post">
           <img src="images/air_baloons.png" alt="air_baloons.png" class="most_recent_post__image"/>
           <span class="most_recent_post__title">Still Standing Tall</span>
-          <p class="most_recent_post__text">
+          <p class="most_recent_post__description">
             Life begins at the end of your comfort zone.
           </p>
           <div class="most_recent_post__info">
             <img src="images/William_Wong.png" alt="William_Wong"/>
-            <span class="most_recent_post__name">William Wong</span>
-            <span class="most_recent_post__date">9/25/2015</span>
+            <span class="most_recent_post__info__author">William Wong</span>
+            <span class="most_recent_post__info__date">9/25/2015</span>
           </div>       
         </div>
         <div class="most_recent_post">
           <img src="images/bridge.png" alt="bridge.png" class="most_recent_post__image"/>
           <span class="most_recent_post__title">Sunny Side Up</span>
-          <p class="most_recent_post__text">
+          <p class="most_recent_post__description">
             No place is ever as bad as they tell you it’s going to be.
           </p>
           <div class="most_recent_post__info">
             <img src="images/Mat_Vogels.png" alt="Mat_Vogels"/>
-            <span class="most_recent_post__name">Mat Vogels</span>
-            <span class="most_recent_post__date">9/25/2015</span>
+            <span class="most_recent_post__info__author">Mat Vogels</span>
+            <span class="most_recent_post__info__date">9/25/2015</span>
           </div>       
         </div>
         <div class="most_recent_post">
           <img src="images/sunset.png" alt="sunset.png" class="most_recent_post__image"/>
           <span class="most_recent_post__title">Water Falls</span>
-          <p class="most_recent_post__text">
+          <p class="most_recent_post__description">
             We travel not to escape life, but for life not to escape us.
           </p>
           <div class="most_recent_post__info">
             <img src="images/Mat_Vogels.png" alt="Mat_Vogels"/>
-            <span class="most_recent_post__name">Mat Vogels</span>
-            <span class="most_recent_post__date">9/25/2015</span>
+            <span class="most_recent_post__info__author">Mat Vogels</span>
+            <span class="most_recent_post__info__date">9/25/2015</span>
           </div>       
         </div>
         <div class="most_recent_post">
           <img src="images/tide.png" alt="tide.png" class="most_recent_post__image"/>
           <span class="most_recent_post__title">Through the Mist</span>
-          <p class="most_recent_post__text">
+          <p class="most_recent_post__description">
             Travel makes you see what a tiny place you occupy in the world.
           </p>
           <div class="most_recent_post__info">
             <img src="images/William_Wong.png" alt="William_Wong"/>
-            <span class="most_recent_post__name">William Wong</span>
-            <span class="most_recent_post__date">9/25/2015</span>
-          </div>       
+            <span class="most_recent_post__info__author">William Wong</span>
+            <span class="most_recent_post__info___date">9/25/2015</span>
+          </div>      
         </div>
         <div class="most_recent_post">
           <img src="images/mist.png" alt="mist.png" class="most_recent_post__image"/>
           <span class="most_recent_post__title">Awaken Early</span>
-          <p class="most_recent_post__text">
+          <p class="most_recent_post__description">
             Not all those who wander are lost.
           </p>
           <div class="most_recent_post__info">
             <img src="images/Mat_Vogels.png" alt="Mat_Vogels"/>
-            <span class="most_recent_post__name">Mat Vogels</span>
-            <span class="most_recent_post__date">9/25/2015</span>
+            <span class="most_recent_post__info__author">Mat Vogels</span>
+            <span class="most_recent_post__info__date">9/25/2015</span>
           </div>       
         </div>
         <div class="most_recent_post">
           <img src="images/waterfall.png" alt="waterfall.png" class="most_recent_post__image"/>
           <span class="most_recent_post__title">Try it Always</span>
-          <p class="most_recent_post__text">
+          <p class="most_recent_post__description">
             The world is a book, and those who do not travel read only one page.
           </p>
           <div class="most_recent_post__info">
             <img src="images/Mat_Vogels.png" alt="Mat_Vogels"/>
-            <span class="most_recent_post__name">Mat Vogels</span>
-            <span class="most_recent_post__date">9/25/2015</span>
+            <span class="most_recent_post__info__author">Mat Vogels</span>
+            <span class="most_recent_post__info__date">9/25/2015</span>
           </div>       
         </div>
       </div>
     </div>
     <footer class="basement">
-      <div class="overlay">
-        <span class="escape escape_white">Escape</span>
-        <nav>
-          <a href="ссылка" class="navigation navigation_white">HOME</a> 
-          <a href="ссылка" class="navigation navigation_white">CATEGORIES</a> 
-          <a href="ссылка" class="navigation navigation_white">ABOUT</a> 
-          <a href="ссылка" class="navigation navigation_white">CONTACT</a> 
+      <div class="basement__overlay">
+        <span class="basement__escape basement__escape_white">Escape</span>
+        <nav class="navigation">
+          <a href="ссылка" class="navigation__link navigation__link_color_white">HOME</a> 
+          <a href="ссылка" class="navigation__link navigation__link_color_white">CATEGORIES</a> 
+          <a href="ссылка" class="navigation__link navigation__link_color_white">ABOUT</a> 
+          <a href="ссылка" class="navigation__link navigation__link_color_white">CONTACT</a> 
         </nav>
       </div>
     </footer>

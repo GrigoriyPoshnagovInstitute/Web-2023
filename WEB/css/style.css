@@ -1,79 +1,98 @@
-.welcome
+.welcome_sheet
 {
-    background: rgba(247, 247, 247, 1);
-    background-image: url("background.png");
-    height: 500px;
+    background: #FFFFFF;
     background-size: cover;
 }
 
-.escape
+.welcome-sheet_background
+{
+    background-image: url("background.png");
+    height: 500px;
+}
+
+.basement__overlay__escape
 {
     font-family: 'Lora', serif;
     font-size: 26px;
 }
 
-.escape_white
+.basement__overlay__escape_white
 {
     color: #FFFFFF;
 }
 
-.escape_gray
+.basement__overlay__escape_gray
 {
     color: #2E2E2E;
 }
 
-.navigation
+.heading__escape
 {
-    text-decoration: none;
+    font-family: 'Lora', serif;
+    font-size: 26px;
+}
+
+.heading__escape_color_white
+{
+    color: #FFFFFF;
+}
+
+.heading__escape_color_gray
+{
+    color: #2E2E2E;
+}
+
+.navigation__link
+{
+    description-decoration: none;
     font-family: 'Oxygen', sans-serif;
     font-size: 11px;
 }
 
-.navigation_white
+.navigation__link_color_white
 {
     color: #FFFFFF;
 }
 
-.navigation_gray
+.navigation__link_color_gray
 {
     color: #2E2E2E;
 }
 
-.slogan
+.welcome_sheet__slogan
 {
     font-family: 'Lora', serif;
     font-size: 50px;
-    color:#FFFFFF;
     font-weight: 400;
 }
 
-.slogan_white
+.welcome_sheet__slogan_color_white
 {
     color:#FFFFFF;
 }
 
-.slogan_gray
+.welcome_sheet__slogan_color_gray
 {
     color:#2E2E2E;
 }
 
-.subtitle
+.welcome_sheet__subtitle
 {
     font-family: 'Oxygen', sans-serif;
     font-size: 17; 
 }
 
-.subtitle_white
+.welcome_sheet__subtitle_color_white
 {
     color:rgba(255, 255, 255, 0.63);    
 }
 
-.subtitle_gray
+.welcome_sheet__subtitle_color_gray
 {
     color:rgba(46, 46, 46, 0.63);    
 }
 
-.view_button
+.welcome_sheet__view_button
 {
     background: rgba(221, 120, 63, 1);
     font-family: 'Oxygen', sans-serif;
@@ -94,7 +113,7 @@
 
 .categories__elem
 {
-    text-decoration: none;
+    description-decoration: none;
     font-family: 'Lora', serif;
     font-size: 14px;
     color:rgba(118, 128, 136, 1);
@@ -105,7 +124,19 @@
     background: rgba(247, 247, 247, 1);
 }
 
-.posts_title
+.featured_posts__title
+{
+    font-weight: 400;
+    font-family: 'Oxygen', sans-serif;
+    font-size: 20px;  
+    color:rgba(46, 46, 46, 1);
+    border-width: 0px 0px 1px 0px;
+    border-style: solid;
+    border-color: rgba(222, 222, 222, 1); 
+    width: 188px;
+}
+
+.most_recent_posts__title
 {
     font-weight: 400;
     font-family: 'Oxygen', sans-serif;
@@ -143,14 +174,14 @@
     font-weight: 400;     
 }
 
-.featured_post__text
+.featured_post__description
 {
     font-family: 'Oxygen', sans-serif;
     font-size: 14px;
     color:rgba(255, 255, 255, 0.7);  
 }
 
-.featured_post__name
+.featured_post__author
 {
     font-family: 'Oxygen', sans-serif;
     font-size: 12px;
@@ -195,7 +226,7 @@
     height: 150px;
 }
 
-.most_recent_post__text
+.most_recent_post__description
 {
     font-family: 'Oxygen', sans-serif;
     font-size: 13px;
@@ -212,14 +243,14 @@
     border-color: rgba(239, 239, 239, 1);
 }
 
-.most_recent_post__name
+.most_recent_post__info__name
 {
     font-family: 'Oxygen', sans-serif;
     font-size: 11px;
     color:rgba(153, 153, 153, 1); 
 }
 
-.most_recent_post__date
+.most_recent_post__info__date
 {
     font-family: 'Oxygen', sans-serif;
     font-size: 11px;
@@ -234,7 +265,7 @@
     background-size: cover;
 }
 
-.overlay
+.basement__overlay
 {
     background-color: rgba(35, 47, 56, 0.6);
     background-size: cover;
@@ -247,11 +278,11 @@
     height: 534px;
 }
 
-.the_road_ahead_text
+.the_road_ahead_description
 {
     width: 960px;
     height: 1431px;
     font-family: 'Oxygen', sans-serif;
     font-size: 24px;
-    color:rgba(16, 19, 21, 1); 
+    background: rgba(247, 247, 247, 1);
 }
