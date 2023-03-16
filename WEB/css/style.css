@@ -1,4 +1,4 @@
-.welcome_sheet
+.welcome-sheet
 {
     background: #FFFFFF;
     background-size: cover;
@@ -10,18 +10,18 @@
     height: 500px;
 }
 
-.basement__overlay__escape
+.basement__escape
 {
     font-family: 'Lora', serif;
     font-size: 26px;
 }
 
-.basement__overlay__escape_white
+.basement__escape_white
 {
     color: #FFFFFF;
 }
 
-.basement__overlay__escape_gray
+.basement__escape_gray
 {
     color: #2E2E2E;
 }
@@ -44,7 +44,7 @@
 
 .navigation__link
 {
-    description-decoration: none;
+    text-decoration: none;
     font-family: 'Oxygen', sans-serif;
     font-size: 11px;
 }
@@ -59,40 +59,41 @@
     color: #2E2E2E;
 }
 
-.welcome_sheet__slogan
+.welcome-sheet__slogan
 {
     font-family: 'Lora', serif;
     font-size: 50px;
     font-weight: 400;
 }
 
-.welcome_sheet__slogan_color_white
+.welcome-sheet__slogan_color_white
 {
     color:#FFFFFF;
 }
 
-.welcome_sheet__slogan_color_gray
+.welcome-sheet__slogan_color_gray
 {
     color:#2E2E2E;
 }
 
-.welcome_sheet__subtitle
+.welcome-sheet__subtitle
 {
     font-family: 'Oxygen', sans-serif;
-    font-size: 17; 
+    font-size: 17px;
+    font-weight: 400;
 }
 
-.welcome_sheet__subtitle_color_white
+.welcome-sheet__subtitle_color_white
 {
     color:rgba(255, 255, 255, 0.63);    
 }
 
-.welcome_sheet__subtitle_color_gray
+.welcome-sheet__subtitle_color_gray
 {
     color:rgba(46, 46, 46, 0.63);    
 }
 
-.welcome_sheet__view_button
+.welcome-sheet__view_button
 {
     background: rgba(221, 120, 63, 1);
     font-family: 'Oxygen', sans-serif;
@@ -278,7 +279,7 @@
     height: 534px;
 }
 
-.the_road_ahead_description
+.post
 {
     width: 960px;
     height: 1431px;
