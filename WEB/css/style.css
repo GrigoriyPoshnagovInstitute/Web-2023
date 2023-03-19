@@ -31,6 +31,15 @@
     width: 100%;
 }
 
+.heading__centering
+{
+    width: 65%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
 .basement__escape
 {
     font-family: 'Lora', serif;
@@ -65,10 +74,10 @@
 
 .navigation
 {
-    width: 30%;
     display: flex;
-    justify-content: space-evenly;
-    gap: 10%;
+    width: 36%;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .navigation__link
@@ -157,6 +166,7 @@
 .main
 {
     background: rgba(247, 247, 247, 1);
+    padding-bottom: 108px;
 }
 
 .featured-posts__title
@@ -174,6 +184,7 @@
     align-items: center;
     letter-spacing: 2px;
     padding-bottom: 16px;
+    margin-top: 60px;
 }
 
 .most-recent-posts-section
@@ -210,6 +221,7 @@
     align-items: center;
     letter-spacing: 2px;
     padding-bottom: 16px;
+    margin-top: 67px;
 }
 
 .featured-posts
@@ -223,8 +235,9 @@
 
 .featured-post
 {  
-    height: 280px;
-    width: 460px;
+    height: 240px;
+    width: 420px;
+    padding: 20px;
     border-radius: 3px;
     background-size: cover;
     margin: 10px 10px 10px 10px;
@@ -248,33 +261,54 @@
     flex-direction: column;
 }
 
+.featured-post__info
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.featured-post__author
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .featured-post__title
 {
     font-family: 'Lora', serif;
     font-size: 27px;
     color:rgba(255, 255, 255, 1);
-    font-weight: 400;     
+    font-weight: 400;
+    margin-top: 0px;
+    margin-bottom: 6px;
 }
 
 .featured-post__description
 {
     font-family: 'Oxygen', sans-serif;
     font-size: 14px;
-    color:rgba(255, 255, 255, 0.7);  
+    color:rgba(255, 255, 255, 0.7);
+    margin-top: 0px;
+    margin-bottom: 17px;
 }
 
-.featured-post__author
+.featured-post__author-name
 {
     font-family: 'Oxygen', sans-serif;
     font-size: 12px;
-    color:rgba(255, 255, 255, 0.7); 
+    color:rgba(255, 255, 255, 0.7);
+    margin-left: 10px; 
 }
 
 .featured-post__publish-date
 {
     font-family: 'Oxygen', sans-serif;
     font-size: 12px;
-    color:rgba(255, 255, 255, 0.7); 
+    color:rgba(255, 255, 255, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .featured-post__splash
@@ -286,6 +320,14 @@
     font-family: 'Oxygen', sans-serif;
     font-size: 12px;
     color:#FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.featured-post__upper-block
+{
+  height: 137px;
 }
 
 .most-recent-post
@@ -318,38 +360,62 @@
 .most-recent-post__info
 {
     background: rgba(252, 252, 252, 1);
-    width: 296px;
-    height: 48px;
+    width: 270px;
+    height: 22px;
     border-width: 1px 0px 0px 0px;
     border-style: solid;
     border-color: rgba(239, 239, 239, 1);
+    display: flex;
+    justify-content: space-between;
+    padding: 13px;
 }
 
-.most-recent-post__author
+.most-recent-post__author-name
 {
     font-family: 'Oxygen', sans-serif;
     font-size: 11px;
     color:rgba(153, 153, 153, 1); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px; 
 }
 
 .most-recent-post__publish-date
 {
     font-family: 'Oxygen', sans-serif;
     font-size: 11px;
-    color:rgba(153, 153, 153, 1); 
+    color:rgba(153, 153, 153, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .basement
 {
     background-size: cover;
     height: 378px;
+    width: 100%;
     background-image: url("village.jpg");
     background-size: cover;
 }
 
 .basement__email-input
 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.basement__stay-in-touch
+{
     height: 289px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .basement__overlay
@@ -384,4 +450,58 @@
     font-family: 'Oxygen', sans-serif;
     font-size: 24px;
     background: rgba(247, 247, 247, 1);
+}
+
+.basement__title
+{
+    font-weight: 400;
+    font-family: 'Oxygen', sans-serif;
+    font-size: 25px;  
+    color:#EFEFEF;
+    border-width: 0px 0px 1px 0px;
+    border-style: solid;
+    border-color: #DEDEDE; 
+    width: 188px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 17px;
+}
+
+.email-input
+{
+    background: #FFFFFF;
+    font-family: 'roboto', sans-serif;
+    font-size: 12px;
+    color:#817F83;
+    border: 0;
+    width: 23.5%;
+    height: 50px;
+    border-radius: 3px 0px 0px 3px;
+    padding-left: 2.5%;
+}
+
+.email-submit
+{
+    background: #FFFFFF47;
+    font-family: 'roboto', sans-serif;
+    font-size: 12px;
+    color:#F8F8F8;
+    border: 0;
+    width: 8.7%;
+    height: 50px;
+    border-radius: 0px 3px 3px 0px;
+}
+
+.most-recent-post__upper
+{
+    height: 66px;
+    padding: 13px;
+}
+
+.most-recent-post__author
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

@@ -6,16 +6,19 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lora&family=Oxygen&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
   </head>
   <body class="page">
     <header class="heading">
-      <span class="heading__escape heading__escape_color_white">Escape.</span>
-      <nav class="navigation">
-        <a href="#" class="navigation__link navigation__link_color_white">HOME</a>
-        <a href="#" class="navigation__link navigation__link_color_white">CATEGORIES</a>
-        <a href="#" class="navigation__link navigation__link_color_white">ABOUT</a>
-        <a href="#" class="navigation__link navigation__link_color_white">CONTACT</a>
-      </nav>
+      <div class="heading__centering">
+        <span class="heading__escape heading__escape_color_white">Escape.</span>
+        <nav class="navigation">
+          <a href="#" class="navigation__link navigation__link_color_white">HOME</a>
+          <a href="#" class="navigation__link navigation__link_color_white">CATEGORIES</a>
+          <a href="#" class="navigation__link navigation__link_color_white">ABOUT</a>
+          <a href="#" class="navigation__link navigation__link_color_white">CONTACT</a>
+        </nav>
+      </div>
     </header>
     <div class="welcome-sheet welcome-sheet_background">
       <h1 class="welcome-sheet__slogan welcome-sheet__slogan_color_white">Let's do it together</h1>
@@ -35,25 +38,37 @@
         <h2 class="featured-posts__title">Featured Posts</h2>
         <div class="featured-posts">
           <div class="featured-post featured-post__background_the-road-ahead">
+            <div class="featured-post__upper-block">            
+            </div>
             <h3 class="featured-post__title">The Road Ahead</h3>
             <p class="featured-post__description">
               The road ahead might be paved - it might not be.
             </p>
-            <img src="images/Mat-Vogels.png" alt="Mat-Vogels"/>
-            <span class="featured-post__author">Mat Vogels</span>
-            <span class="featured-post__publish-date">September 25, 2015</span>      
+            <div class="featured-post__info">
+              <div class="featured-post__author">
+                <img src="images/Mat-Vogels.png" alt="Mat-Vogels"/>
+                <span class="featured-post__author-name">Mat Vogels</span>
+              </div>
+              <span class="featured-post__publish-date">September 25, 2015</span>
+            </div>   
           </div>
           <div class="featured-post featured-post__background_from-top-to-down">
-            <div class="featured-post__splash">
-              <span>ADVENTURE</span>
+            <div class="featured-post__upper-block">  
+              <div class="featured-post__splash">
+                <span>ADVENTURE</span>
+              </div>
             </div>
             <h3 class="featured-post__title">From Top Down</h3>
             <p class="featured-post__description">
               Once a year, go someplace you’ve never been before.
             </p>
-            <img src="images/William-Wong.png" alt="William-Wong"/>
-            <span class="featured-post__author"> William Wong </span>
-            <span class="featured-post__publish-date">September 25, 2015</span>
+            <div class="featured-post__info">
+              <div class="featured-post__author">
+                <img src="images/William-Wong.png" alt="William-Wong"/>
+                <span class="featured-post__author-name"> William Wong </span>
+              </div>
+              <span class="featured-post__publish-date">September 25, 2015</span>
+            </div>
           </div>
         </div>
       </div>
@@ -62,13 +77,17 @@
         <div class="most-recent-posts">
           <div class="most-recent-post">
             <img src="images/air-baloons.png" alt="air_baloons.png" class="most-recent-post__image"/>
-            <span class="most-recent-post__title">Still Standing Tall</span>
-            <p class="most-recent-post__description">
-              Life begins at the end of your comfort zone.
-            </p>
+            <div class="most-recent-post__upper">
+              <span class="most-recent-post__title">Still Standing Tall</span>
+              <p class="most-recent-post__description">
+                Life begins at the end of your comfort zone.
+              </p>
+            </div>
             <div class="most-recent-post__info">
-              <img src="images/William-Wong.png" alt="William-Wong"/>
-              <span class="most-recent-post__author">William Wong</span>
+              <div class="most-recent-post__author">
+                <img src="images/William-Wong.png" alt="William-Wong"/>
+                <span class="most-recent-post__author-name">William Wong</span>
+              </div>
               <span class="most-recent-post__publish-date">9/25/2015</span>
             </div>       
           </div>
@@ -80,7 +99,7 @@
             </p>
             <div class="most-recent-post__info">
               <img src="images/Mat-Vogels.png" alt="Mat-Vogels"/>
-              <span class="most-recent-post__author">Mat Vogels</span>
+              <span class="most-recent-post__author-name">Mat Vogels</span>
               <span class="most-recent-post__publish-date">9/25/2015</span>
             </div>       
           </div>
@@ -92,7 +111,7 @@
             </p>
             <div class="most-recent-post__info">
               <img src="images/Mat-Vogels.png" alt="Mat-Vogels"/>
-              <span class="most-recent-post__author">Mat Vogels</span>
+              <span class="most-recent-post__author-name">Mat Vogels</span>
               <span class="most-recent-post__publish-date">9/25/2015</span>
             </div>       
           </div>
@@ -104,7 +123,7 @@
             </p>
             <div class="most-recent-post__info">
               <img src="images/William-Wong.png" alt="William-Wong"/>
-              <span class="most-recent-post__author">William Wong</span>
+              <span class="most-recent-post__author-name">William Wong</span>
               <span class="most-recent-post__publish-date">9/25/2015</span>
             </div>      
           </div>
@@ -116,7 +135,7 @@
             </p>
             <div class="most-recent-post__info">
               <img src="images/Mat-Vogels.png" alt="Mat-Vogels"/>
-              <span class="most-recent-post__author">Mat Vogels</span>
+              <span class="most-recent-post__author-name">Mat Vogels</span>
               <span class="most-recent-post__publish-date">9/25/2015</span>
             </div>       
           </div>
@@ -128,7 +147,7 @@
             </p>
             <div class="most-recent-post__info">
               <img src="images/Mat-Vogels.png" alt="Mat-Vogels"/>
-              <span class="most-recent-post__author">Mat Vogels</span>
+              <span class="most-recent-post__author-name">Mat Vogels</span>
               <span class="most-recent-post__publish-date">9/25/2015</span>
             </div>       
           </div>
@@ -136,10 +155,13 @@
       </div>
     </div>
     <footer class="basement">
-      <form class="basement__email-input">
-        <input type="text" placeholder="Stay in touch">
-        <input type="submit" value="Submit">
-      </form>
+      <div class="basement__stay-in-touch">
+        <h2 class="basement__title">Stay in Touch</h2>
+        <form class="basement__email-input">
+          <input class="email-input" type="text" placeholder="Enter your email address">
+          <input class="email-submit" type="submit" value="Submit">
+        </form>
+      </div>
       <div class="basement__overlay">
         <div class="basement__foot">
           <span class="basement__escape basement__escape_white">Escape</span>
