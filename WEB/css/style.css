@@ -342,6 +342,8 @@
     font-family: 'Lora', serif;
     font-size: 16px;
     color:rgba(16, 19, 21, 1);
+    margin-bottom: 6px;
+    margin-top: 14px;
 }
 
 .most-recent-post__image
@@ -354,7 +356,9 @@
 {
     font-family: 'Oxygen', sans-serif;
     font-size: 13px;
-    color:rgba(122, 122, 122, 1); 
+    color:rgba(122, 122, 122, 1);
+    margin-bottom: 0px;
+    margin-top: 6px; 
 }
 
 .most-recent-post__info
@@ -476,9 +480,10 @@
     color:#817F83;
     border: 0;
     width: 23.5%;
-    height: 50px;
+    height: 48px;
     border-radius: 3px 0px 0px 3px;
     padding-left: 2.5%;
+    border-width: 0px;
 }
 
 .email-submit
