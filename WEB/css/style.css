@@ -1,13 +1,34 @@
+.page
+{
+    margin: 0;
+}
+
 .welcome-sheet
 {
     background: #FFFFFF;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .welcome-sheet_background
 {
     background-image: url("background.png");
     height: 500px;
+    width: 100%;
+}
+
+.heading
+{
+    position: absolute;
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+    width: 100%;
 }
 
 .basement__escape
@@ -42,6 +63,14 @@
     color: #2E2E2E;
 }
 
+.navigation
+{
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10%;
+}
+
 .navigation__link
 {
     text-decoration: none;
@@ -63,7 +92,7 @@
 {
     font-family: 'Lora', serif;
     font-size: 50px;
-    font-weight: 400;
+    margin-bottom: 20px;
 }
 
 .welcome-sheet__slogan_color_white
@@ -81,6 +110,7 @@
     font-family: 'Oxygen', sans-serif;
     font-size: 17px;
     font-weight: 400;
+    margin: 0 0 31px;
 }
 
 .welcome-sheet__subtitle_color_white
@@ -109,7 +139,11 @@
 {
     background: rgba(255, 255, 255);
     height: 65px;
-    width: 1440px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .categories__elem
@@ -135,6 +169,30 @@
     border-style: solid;
     border-color: rgba(222, 222, 222, 1); 
     width: 188px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 2px;
+    padding-bottom: 16px;
+}
+
+.most-recent-posts-section
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.most-recent-posts
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: calc(940%/1440*100);
+    gap: 24px;
+       
 }
 
 .most-recent-posts__title
@@ -147,6 +205,20 @@
     border-style: solid;
     border-color: rgba(222, 222, 222, 1); 
     width: 188px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 2px;
+    padding-bottom: 16px;
+}
+
+.featured-posts
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 .featured-post
@@ -155,16 +227,25 @@
     width: 460px;
     border-radius: 3px;
     background-size: cover;
+    margin: 10px 10px 10px 10px;
 }
 
-.featured-post_TheRoadAhead
+.featured-post__background_the-road-ahead
 {
     background-image: url("background-of-the-road-ahead.png");  
 }
 
-.featured-post_FromTopToDown
+.featured-post__background_from-top-to-down
 {
     background-image: url("background-of-from-top-to-down.png");    
+}
+
+.featured-posts-section
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .featured-post__title
@@ -189,7 +270,7 @@
     color:rgba(255, 255, 255, 0.7); 
 }
 
-.featured-post__date
+.featured-post__publish-date
 {
     font-family: 'Oxygen', sans-serif;
     font-size: 12px;
@@ -251,7 +332,7 @@
     color:rgba(153, 153, 153, 1); 
 }
 
-.most-recent-post__date
+.most-recent-post__publish-date
 {
     font-family: 'Oxygen', sans-serif;
     font-size: 11px;
@@ -261,9 +342,14 @@
 .basement
 {
     background-size: cover;
-    height: 89px;
+    height: 378px;
     background-image: url("village.jpg");
     background-size: cover;
+}
+
+.basement__email-input
+{
+    height: 289px;
 }
 
 .basement__overlay
@@ -271,6 +357,18 @@
     background-color: rgba(35, 47, 56, 0.6);
     background-size: cover;
     height: 89px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.basement__foot
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    width: calc(920%/1440*100);
 }
 
 .the-road-ahead_image
