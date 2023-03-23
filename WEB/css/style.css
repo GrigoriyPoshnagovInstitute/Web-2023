@@ -1,6 +1,11 @@
 .page
 {
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .welcome-sheet
@@ -26,18 +31,11 @@
     padding-top: 20px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: baseline;
-    width: 100%;
-}
-
-.heading__centering
-{
-    width: 65%;
-    display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
+    width: 80%;
+    max-width: 940px;
+    top: 0;
 }
 
 .basement__escape
@@ -75,8 +73,8 @@
 .navigation
 {
     display: flex;
-    width: 36%;
-    justify-content: space-between;
+    width: 50%;
+    justify-content: end;
     flex-wrap: wrap;
 }
 
@@ -84,7 +82,8 @@
 {
     text-decoration: none;
     font-family: 'Oxygen', sans-serif;
-    font-size: 11px;
+    font-size: 12px;
+    padding-left:40px;
 }
 
 .navigation__link_color_white
@@ -102,6 +101,7 @@
     font-family: 'Lora', serif;
     font-size: 50px;
     margin-bottom: 20px;
+    text-align:center;
 }
 
 .welcome-sheet__slogan_color_white
@@ -120,6 +120,7 @@
     font-size: 17px;
     font-weight: 400;
     margin: 0 0 31px;
+    text-align:center;
 }
 
 .welcome-sheet__subtitle_color_white
@@ -148,9 +149,10 @@
 {
     background: rgba(255, 255, 255);
     height: 65px;
-    width: 100%;
+    width: 90%;
+    max-width: 940px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
 }
@@ -167,9 +169,10 @@
 {
     background: rgba(247, 247, 247, 1);
     padding-bottom: 108px;
+    width: 100%;
 }
 
-.featured-posts__title
+.featured-posts-section__title
 {
     font-weight: 400;
     font-family: 'Oxygen', sans-serif;
@@ -201,7 +204,7 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    width: calc(940%/1440*100);
+    width: 65%;
     gap: 24px;
        
 }
@@ -236,7 +239,8 @@
 .featured-post
 {  
     height: 240px;
-    width: 420px;
+    max-width: 420px;
+    width: 90%;
     padding: 20px;
     border-radius: 3px;
     background-size: cover;
@@ -436,24 +440,27 @@
 {
     display: flex;
     flex-wrap: wrap;
-    align-items: baseline;
     justify-content: space-between;
-    width: calc(920%/1440*100);
+    align-items: center;
+    width: 80%;
+    max-width: 940px;
 }
 
 .the-road-ahead_image
 {
+    width: 100%;
     background-size: cover;
-    height: 534px;
 }
 
 .post
 {
-    width: 960px;
-    height: 1431px;
     font-family: 'Oxygen', sans-serif;
     font-size: 24px;
     background: rgba(247, 247, 247, 1);
+    padding-top: 116px;
+    padding-bottom: 111px;
+    padding-left: 17%;
+    padding-right: 17%;
 }
 
 .basement__title
@@ -509,4 +516,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.welcome-sheet__slogan_post
+{
+    margin-top: 156px;
+}
+
+.welcome-sheet__subtitle_post
+{
+    margin-bottom: 113px;
 }
