@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Frontend начало</title>
+    <title>{{ .Title }}</title>
     <link rel="stylesheet" type="text/css" href="static/css/style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lora&family=Oxygen&display=swap" rel="stylesheet">
@@ -36,36 +36,24 @@
         <h2 class="featured-posts-section__title">Featured Posts</h2>
         <div class="featured-posts">
 
-          <div class="featured-post featured-post__background_the-road-ahead">
-            <h3 class="featured-post__title">The Road Ahead</h3>
+          {{ range .FeaturedPosts }}
+          <div class="featured-post {{ .ImgModifier }}">
+            <div class={{ .SpanClass }}>
+              <span>{{ .Span }}</span>
+            </div>
+            <h3 class="featured-post__title">{{ .Title }}</h3>
             <p class="featured-post__description">
-              The road ahead might be paved - it might not be.
+              {{ .Subtitle }}
             </p>
             <div class="featured-post__info">
               <div class="featured-post__author">
-                <img src="images/Mat-Vogels.png" alt="Mat-Vogels"/>
-                <span class="featured-post__author-name">Mat Vogels</span>
+                <img src={{ .AuthorImg }} alt="{{ .Author }}"/>
+                <span class="featured-post__author-name">{{ .Author }}</span>
               </div>
-              <span class="featured-post__publish-date">September 25, 2015</span>
+              <span class="featured-post__publish-date">{{ .PublishDate }}</span>
             </div>   
           </div>
-
-          <div class="featured-post featured-post__background_from-top-to-down"> 
-              <div class="featured-post__splash">
-                <span>ADVENTURE</span>
-              </div>
-            <h3 class="featured-post__title">From Top Down</h3>
-            <p class="featured-post__description">
-              Once a year, go someplace you’ve never been before.
-            </p>
-            <div class="featured-post__info">
-              <div class="featured-post__author">
-                <img src="images/William-Wong.png" alt="William-Wong"/>
-                <span class="featured-post__author-name"> William Wong </span>
-              </div>
-              <span class="featured-post__publish-date">September 25, 2015</span>
-            </div>
-          </div>
+          {{ end }}
 
         </div>
       </div>
