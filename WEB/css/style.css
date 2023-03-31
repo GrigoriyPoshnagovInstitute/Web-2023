@@ -20,8 +20,8 @@
 
 .welcome-sheet_post
 {
-    padding-top: 108px;
-    padding-bottom: 113px;
+    margin-top: 108px;
+    margin-bottom: 113px;
 }
 
 .welcome-sheet_background
@@ -33,19 +33,26 @@
 
 .heading
 {
-    padding-top: 20px;
+
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: baseline;
     width: 80%;
     max-width: 940px;
-    top: 0;
+
 }
 
 .heading_absolute
 {
     position: absolute;
+    padding-top: 20px;
+    top: 0;
+}
+
+.heading_margin-top
+{
+    margin-top: 20px;
 }
 
 .basement__escape
@@ -245,6 +252,7 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    gap: 24px;
     width: 100%;
 }
 
@@ -256,7 +264,6 @@
     padding: 20px;
     border-radius: 3px;
     background-size: cover;
-    margin: 10px 10px 10px 10px;
     display: flex;
     flex-direction:column;
     justify-content: end;
