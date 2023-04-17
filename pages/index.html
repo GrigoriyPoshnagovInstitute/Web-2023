@@ -38,9 +38,6 @@
 
           {{ range .FeaturedPosts }}
           <div class="featured-post {{ .ImgModifier }}">
-            <div class={{ .SpanClass }}>
-              <span>{{ .Span }}</span>
-            </div>
             <h3 class="featured-post__title">{{ .Title }}</h3>
             <p class="featured-post__description">
               {{ .Subtitle }}
@@ -63,7 +60,7 @@
 
           {{ range .MostRecentPosts }}
           <div class="most-recent-post">
-            <img src="{{ .ImgDir }}" alt="{{ .Img }}" class="most-recent-post__image"/>
+            <img src="{{ .ImgModifier }}" alt="{{ .ImgModifier }}" class="most-recent-post__image"/>
             <div class="most-recent-post__upper">
               <span class="most-recent-post__title">{{ .Title }}</span>
               <p class="most-recent-post__description">
