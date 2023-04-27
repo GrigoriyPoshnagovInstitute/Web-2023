@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>{{ .Title }}</title>
-    <link rel="stylesheet" type="text/css" href="static/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lora&family=Oxygen&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
@@ -38,7 +38,7 @@
 
           {{ range .FeaturedPosts }}
           <div class="featured-post {{ .ImgModifier }}">
-            <h3 class="featured-post__title">{{ .Title }}</h3>
+            <h3 class="featured-post__title"><a class="featured-post__title" href="/post/{{ .PostID }}">{{ .Title }}</a></h3>
             <p class="featured-post__description">
               {{ .Subtitle }}
             </p>
@@ -48,7 +48,7 @@
                 <span class="featured-post__author-name">{{ .Author }}</span>
               </div>
               <span class="featured-post__publish-date">{{ .PublishDate }}</span>
-            </div>   
+            </div> 
           </div>
           {{ end }}
 
@@ -62,7 +62,7 @@
           <div class="most-recent-post">
             <img src="{{ .ImgModifier }}" alt="{{ .ImgModifier }}" class="most-recent-post__image"/>
             <div class="most-recent-post__upper">
-              <span class="most-recent-post__title">{{ .Title }}</span>
+              <span class="most-recent-post__title"><a class="most-recent-post__title" href="/post/{{ .PostID }}">{{ .Title }}</a></span>
               <p class="most-recent-post__description">
                 {{ .Subtitle }}
               </p>
