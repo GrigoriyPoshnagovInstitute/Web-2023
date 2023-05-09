@@ -19,9 +19,9 @@ VALUES (
 	But at front and rear, unawed and indomitable, toiled the two men who were not yet dead. Their bodies were covered with fur and soft-tanned leather. Eyelashes and cheeks and lips were so coated with the crystals from their frozen breath that their faces were not discernible. This gave them the seeming of ghostly masques, undertakers in a spectral world at the funeral of some ghost. But under it all they were men, penetrating the land of desolation and mockery and silence, puny adventurers bent on colossal adventure, pitting themselves against the might of a world as remote and alien and pulseless as the abysses of space.
 	",
     'featured-post__background_the-road-ahead',
-    'static/img/background-of-the-road-ahead.png',
+    '/static/img/background-of-the-road-ahead.png',
     '09/25/2015',
-    'static/img/Mat-Vogels.png',
+    '/static/img/Mat-Vogels.png',
     'Mat Vogels',
     1
 );
@@ -48,9 +48,9 @@ VALUES (
 	In conclusion, my journey from top to bottom was a reminder of the beauty and wonder that exists in our world. It was a journey that left me with memories I will cherish for a lifetime. I encourage everyone to take the time to go somewhere they've never been before, and to experience all the amazing things our world has to offer. Only by exploring new places and trying new things can we truly appreciate the vastness and diversity of our planet.
 	",
     'featured-post__background_from-top-to-down',
-    'static/img/background-of-from-top-to-down.png',
+    '/static/img/background-of-from-top-to-down.png',
     '09/25/2015',
-    'static/img/William-Wong.png',
+    '/static/img/William-Wong.png',
     'William Wong',
     1
 );
@@ -78,9 +78,9 @@ VALUES (
 	So whenever I feel overwhelmed or discouraged, I think back to those towering trees and remind myself that I too can stand tall and weather any storm that comes my way.
 	",
     NULL,
-    'static/img/air-baloons.png',
+    '/static/img/air-baloons.png',
     '09/25/2015',
-    'static/img/William-Wong.png',
+    '/static/img/William-Wong.png',
     'William-Wong',
     0
 );
@@ -109,9 +109,9 @@ VALUES (
 	If you're looking for a new adventure, consider exploring the sunny side of Southeast Asia. You might just find yourself falling in love with a place you never knew existed.
 	",
     NULL,
-    'static/img/bridge.png',
+    '/static/img/bridge.png',
     '09/25/2015',
-    'static/img/Mat-Vogels.png',
+    '/static/img/Mat-Vogels.png',
     'Mat-Vogels',
     0
 );
@@ -140,9 +140,9 @@ VALUES (
 	If you're looking for a new adventure, consider exploring the sunny side of Southeast Asia. You might just find yourself falling in love with a place you never knew existed.
 	",
     NULL,
-    'static/img/sunset.png',
+    '/static/img/sunset.png',
     '09/25/2015',
-    'static/img/Mat-Vogels.png',
+    '/static/img/Mat-Vogels.png',
     'Mat-Vogels',
     0
 );
@@ -171,9 +171,9 @@ VALUES (
 	In conclusion, Through the Mist was an unforgettable journey that reminded me of the beauty that lies beyond my comfort zone. It taught me to embrace the unknown and appreciate the simple joys of life. As I continue to travel, I hope to experience many more such moments that allow me to connect with nature and discover myself.
 	",
     NULL,
-    'static/img/tide.png',
+    '/static/img/tide.png',
     '9/25/2015',
-    'static/img/William-Wong.png',
+    '/static/img/William-Wong.png',
     'William-Wong',
     0
 );
@@ -202,9 +202,9 @@ VALUES (
 	In the end, Awaken Early became one of my favorite journeys. The early mornings allowed me to experience Cusco in a way that few others have, and I felt like I had truly immersed myself in the city's culture and history. It reminded me that sometimes the best moments happen when we're willing to wake up a little earlier and experience the world as it wakes up around us.
 	",
     NULL,
-    'static/img/mist.png',
+    '/static/img/mist.png',
     '9/25/2015',
-    'static/img/Mat-Vogels.png',
+    '/static/img/Mat-Vogels.png',
     'Mat Vogels',
     0
 );
@@ -231,9 +231,9 @@ VALUES (
 	Traveling is not just about ticking off places from a bucket list, it's about experiencing new things and pushing your boundaries. Trying something new can be scary, but it can also be incredibly rewarding. So, the next time you travel, make it a point to try something new. You never know, it might just become your next favorite thing.
 	",
     NULL,
-    'static/img/waterfall.png',
+    '/static/img/waterfall.png',
     '9/25/2015',
-    'static/img/Mat-Vogels.png',
+    '/static/img/Mat-Vogels.png',
     'Mat Vogels',
     0
 );
@@ -252,9 +252,9 @@ INSERT INTO
 VALUES (
     'Try it Always',
     'The world is a book, and those who do not travel read only one page.',
-    'static/img/waterfall.png',
+    '/static/img/waterfall.png',
     '9/25/2015',
-    'static/img/Mat-Vogels.png',
+    '/static/img/Mat-Vogels.png',
     'Mat Vogels',
     0
 );

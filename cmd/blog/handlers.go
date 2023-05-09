@@ -19,10 +19,6 @@ type indexPage struct {
 	MostRecentPosts []mostRecentPostData
 }
 
-type postPage struct {
-	Title string
-}
-
 type featuredPostData struct {
 	PostID      string `db:"post_id"`
 	Title       string `db:"title"`

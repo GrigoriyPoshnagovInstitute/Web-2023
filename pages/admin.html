@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>admin</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/adminstyle.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Oxygen&display=swap" rel="stylesheet">
+  </head>
+  <body class="page">
+    <header class="heading">
+      <div class="heading__space">
+        <div class="heading__logo">
+          <span class="heading__escape">Escape.</span>
+          <span class="heading__subtitle">author</span>
+        </div>
+        <div class="right-menu">
+          <div class="avatar">
+            <span>N</span>
+          </div>
+          <div class="back">
+            <img src="../static/img/log-out.png">
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="new-post">
+      <div class="new-post__heading">
+        <div class="new-post__description">
+          <h2 class="new-post__title">New post</h2>
+          <span class="new-post__subtitle">Fill out the form bellow and publish your article</span>  
+        </div>
+        <div>
+          <button class="publish">Publish</button>
+        </div>  
+      </div>
+      <div class="new-post__window">
+        <span class="main-information__title">Main Information</span>
+        <div class="main-information">
+          <form class="new-post__form">
+            <span class="field-description">Title</span>
+            <input class="field-input" type="text">
+            <span class="field-description">Short description</span>
+            <input class="field-input" type="text">
+            <span class="field-description">Author name</span>
+            <input class="field-input" type="text">
+            <span class="field-description">Author photo</span>
+            <div class="upload-image">
+              <img class="field-avatar" src="../static/img/camera.png">
+              <button class="upload-button">Upload</button>
+            </div>
+            <span class="field-description">Publish date</span>
+            <input class="field-input" type="date">
+            <span class="field-description">Hero image</span>
+            <img class="field-hero-image" src="../static/img/hero-image.png">
+            <span class="extension-description">Size up to 10mb. Format: png, jpeg, gif.</span>
+            <span class="field-description">Hero image</span>
+            <img class="small-field-hero-image" src="../static/img/small-hero-image.png">
+            <span class="extension-description">Size up to 5mb. Format: png, jpeg, gif.</span>
+          </form>
+          <div class="preview">
+            <span class="field-description">Article preview</span>
+            <div class="upper">
+              <div class="upper-outer">
+                <div class="upper-middle">
+                  <div class="upper-center">
+                    <div class="dots">
+                      <img src="../static/img/elipse.png" class="dot">
+                      <img src="../static/img/elipse.png" class="dot">
+                      <img src="../static/img/elipse.png" class="dot">
+                    </div>
+                  </div>
+                  <div class="preview-title">
+                    <div class="preview-title__text">
+                      <h3 class="preview-title__title">New Post</h3>
+                      <h4 class="preview-title__subtitle">Please, enter any description</h4>
+                    </div>
+                  </div>
+                  <div class="preview-upper-image"></div>
+                </div>
+              </div>
+              <div class="right-grad"></div>
+              <div class="bottom-grad"></div>
+            </div>
+            <span class="field-description">Post card preview</span>
+            <div class="lower"> 
+              <div class="lower-outer">
+                <div class="post-card">
+                  <div class="preview-lower-image"></div>
+                  <div class="preview-lower-title">
+                    <h3 class="preview-lower-title__title">New Post</h3>
+                    <h4 class="preview-lower-title__subtitle">Please, enter any description</h4>
+                  </div>
+                  <div class="preview-lower-description">
+                    <div class="author">
+                      <div class="avatar-preview"></div>
+                      <span class="author-name">Enter author name</span>
+                    </div>
+                    <span class="date">04/05/2023</span>
+                  </div> 
+                </div>
+              </div>
+              <div class="right-grad"></div>
+              <div class="bottom-grad"></div>
+            </div>
+          </div>
+        </div> 
+      </div>
+    </div>
+    <div class="content">
+      <div class="content__inside">
+        <h2 class="content__title">Content</h2>
+        <span class="field-description">Post content (plain text)</span>
+        <form>
+          <textarea class="content-input" placeholder="Type anything you want ..."></textarea>
+        </form>
+      </div>
+    </div>
+    <footer>
+
+    </footer>
+  </body>
+</html>

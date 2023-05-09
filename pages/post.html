@@ -21,7 +21,7 @@
       <h1 class="welcome-sheet__slogan welcome-sheet__slogan_color_gray">{{ .Title }}</h1>
       <h2 class="welcome-sheet__subtitle welcome-sheet__subtitle_color_gray welcome-sheet__subtitle_post">{{ .Subtitle }}</h2>
     </div>
-    <img src="../{{ .ImgModifier }}" alt="picture-for-the-article.png" class="the-road-ahead_image"/>
+    <img src="{{ .ImgModifier }}" alt="picture-for-the-article.png" class="the-road-ahead_image"/>
     <article class="post">
       <p class="post__article-content">
         {{ .Content }}
