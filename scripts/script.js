@@ -26,6 +26,7 @@ function uploadimg3() {
 }
 
 function previewFile() {
+
   const preview = document.getElementById("img1");
   const preview2 = document.getElementById("img2");
   const file = document.querySelector("#getFile").files[0];

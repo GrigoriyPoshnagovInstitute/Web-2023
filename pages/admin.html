@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script src="/scripts/script.js" async></script>
+    <script src="/scripts/script2.js" async></script>
     <meta charset="UTF-8" />
     <title>admin</title>
     <link rel="stylesheet" type="text/css" href="/static/css/adminstyle.css" />
@@ -40,7 +40,7 @@
           >
         </div>
         <div>
-          <button class="publish">Publish</button>
+          <button class="publish" id="publish-button">Publish</button>
         </div>
       </div>
       <div class="new-post__window">
@@ -48,85 +48,70 @@
         <div class="main-information">
           <form class="new-post__form">
             <span class="field-description">Title</span>
-            <input class="field-input" type="text" id="field1" />
+            <input class="field-input" type="text" id="title-field"/>
             <span class="field-description">Short description</span>
-            <input class="field-input" type="text" id="field2" />
-            <span class="field-description">Author name</span>
-            <input class="field-input" type="text" id="field3" />
+            <input class="field-input" type="text" id="description-field"/>
+            <span class="field-description" >Author name</span>
+            <input class="field-input" type="text" id="name-field"/>
             <span class="field-description">Author photo</span>
             <div class="upload-image">
               <img
-                id="img1"
                 class="field-avatar"
                 src="/static/img/camera.png"
+                id="avatar-field"
               />
-              <div id="upload1" class="centering">
+              <div class="centering">
                 <img
-                  id="small-cam-to-hide"
                   src="/static/img/camera-small.png"
-                  style="display: none"
                   class="small-camera"
+                  id="small-camera-avatar"
                 />
-                <span class="upload-button" id="upload-text">Upload</span>
+                <span class="upload-button" id="upload-avatar-button">Upload</span>
               </div>
               <input
-                id="getFile"
                 type="file"
-                style="display: none"
-                onchange="previewFile()"
+                class="hidden"
+                id="upload-avatar-hidden"
               />
               <div
                 class="remove-block"
-                id="remove-button"
-                onclick="removeImg()"
+                id="remove-avatar"
               >
                 <img src="/static/img/bucket.png" />
                 <span class="remove">Remove</span>
               </div>
             </div>
             <span class="field-description">Publish date</span>
-            <input class="field-input" type="date" id="field4" />
+            <input class="field-input" type="date" id="date-field"/>
             <span class="field-description">Hero image</span>
             <img
-              id="img3"
               class="field-hero-image"
               src="/static/img/hero-image.png"
+              id="hero-field"
             />
             <input
-              id="getFile2"
               type="file"
-              style="display: none"
-              onchange="previewHeroFile()"
+              class="hidden"
+              id="upload-hero-hidden"
             />
             <span
-              id="span1"
               class="extension-description"
-              style="display: block"
+              id="format-information"
               >Size up to 10mb. Format: png, jpeg, gif.</span
             >
             <div class="centering upper-margin">
-              <div id="replace1" class="centering" style="display: none">
-                <img src="/static/img/camera-small.png" class="small-camera" />
+              <div class="centering hidden" id="upload-hero-button">
+                <img src="/static/img/camera-small.png" class="small-hero-camera" />
                 <span class="upload-button">Upload new</span>
               </div>
               <div
                 class="remove-block"
-                id="remove-button1"
-                onclick="removeImg1()"
-                style="display: none"
+                id="remove-hero"
               >
                 <img src="/static/img/bucket.png" />
                 <span class="remove">Remove</span>
               </div>
             </div>
-            <span class="field-description">Hero image</span>
-            <img
-              class="small-field-hero-image"
-              src="/static/img/small-hero-image.png"
-            />
-            <span class="extension-description"
-              >Size up to 5mb. Format: png, jpeg, gif.</span
-            >
           </form>
           <div class="preview">
             <span class="field-description">Article preview</span>
@@ -142,16 +127,16 @@
                   </div>
                   <div class="preview-title">
                     <div class="preview-title__text">
-                      <h3 class="preview-title__title">New Post</h3>
-                      <h4 class="preview-title__subtitle">
+                      <h3 class="preview-title__title" id="preview-title">New Post</h3>
+                      <h4 class="preview-title__subtitle" id="preview-description">
                         Please, enter any description
                       </h4>
                     </div>
                   </div>
                   <img
-                    id="img4"
                     src="/static/img/gray2.png"
                     class="preview-upper-image"
+                    id="preview-image"
                   />
                 </div>
               </div>
@@ -162,23 +147,23 @@
             <div class="lower">
               <div class="lower-outer">
                 <div class="post-card">
-                  <div class="preview-lower-image"></div>
+                  <img class="preview-lower-image" src="/static/img/gray3.png" id="card-image"/>
                   <div class="preview-lower-title">
-                    <h3 class="preview-lower-title__title">New Post</h3>
-                    <h4 class="preview-lower-title__subtitle">
+                    <h3 class="preview-lower-title__title" id="card-title">New Post</h3>
+                    <span class="preview-lower-title__subtitle" id="card-description">
                       Please, enter any description
-                    </h4>
+                    </span>
                   </div>
                   <div class="preview-lower-description">
                     <div class="author">
                       <img
                         class="avatar-preview"
-                        id="img2"
                         src="/static/img/gray.png"
+                        id="card-avatar"
                       />
-                      <span class="author-name">Enter author name</span>
+                      <span class="author-name" id="card-name">Enter author name</span>
                     </div>
-                    <span class="date">04/05/2023</span>
+                    <span class="date" id="card-date">04/05/2023</span>
                   </div>
                 </div>
               </div>
@@ -198,6 +183,7 @@
           <textarea
             class="content-input"
             placeholder="Type anything you want ..."
+            id="content"
           ></textarea>
         </form>
       </div>

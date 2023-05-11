@@ -204,6 +204,7 @@ textarea {
   color: #999999;
   margin-bottom: 5px;
   margin-top: 12px;
+  display: block;
 }
 .small-field-hero-image {
   width: 100%;
@@ -322,13 +323,18 @@ textarea {
   border-style: solid;
   border-width: 1px;
   border-color: #efefef;
-  height: 296px;
-  width: 291px;
+  height: 291px;
+  width: 296px;
   background-color: #fcfcfc;
+  display: flex;
+  flex-direction: column;
 }
 .preview-lower-image {
   height: 150px;
+  width: 296px;
   background-color: #f7f7f7;
+  object-fit: cover;
+  
 }
 .preview-lower-title {
   height: 72px;
@@ -338,7 +344,7 @@ textarea {
   border-top-width: 1px;
   border-bottom-width: 1px;
   background-color: #ffffff;
-  padding: 13px;
+  padding: 10px;
 }
 .preview-lower-title__title {
   font-family: Lora;
@@ -356,6 +362,8 @@ textarea {
   font-weight: 400;
   text-align: left;
   color: #7a7a7a;
+  width: 270px;
+  text-overflow: clip;
 }
 .preview-lower-description {
   display: flex;
@@ -454,8 +462,17 @@ textarea {
 
 .small-camera {
   margin-right: 9px;
+  display: none;
+}
+
+.small-hero-camera {
+  margin-right: 9px;
 }
 
 .upper-margin {
   margin-top: 12px;
+}
+
+.hidden {
+  display: none;
 }
