@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
+    <script src="/scripts/script.js" async></script>
+    <meta charset="UTF-8" />
     <title>admin</title>
-    <link rel="stylesheet" type="text/css" href="../static/css/adminstyle.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Oxygen&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/static/css/adminstyle.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora&family=Oxygen&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body class="page">
     <header class="heading">
@@ -19,7 +26,7 @@
             <span>N</span>
           </div>
           <div class="back">
-            <img src="../static/img/log-out.png">
+            <img src="/static/img/log-out.png" />
           </div>
         </div>
       </div>
@@ -28,35 +35,98 @@
       <div class="new-post__heading">
         <div class="new-post__description">
           <h2 class="new-post__title">New post</h2>
-          <span class="new-post__subtitle">Fill out the form bellow and publish your article</span>  
+          <span class="new-post__subtitle"
+            >Fill out the form bellow and publish your article</span
+          >
         </div>
         <div>
           <button class="publish">Publish</button>
-        </div>  
+        </div>
       </div>
       <div class="new-post__window">
         <span class="main-information__title">Main Information</span>
         <div class="main-information">
           <form class="new-post__form">
             <span class="field-description">Title</span>
-            <input class="field-input" type="text">
+            <input class="field-input" type="text" id="field1" />
             <span class="field-description">Short description</span>
-            <input class="field-input" type="text">
+            <input class="field-input" type="text" id="field2" />
             <span class="field-description">Author name</span>
-            <input class="field-input" type="text">
+            <input class="field-input" type="text" id="field3" />
             <span class="field-description">Author photo</span>
             <div class="upload-image">
-              <img class="field-avatar" src="../static/img/camera.png">
-              <button class="upload-button">Upload</button>
+              <img
+                id="img1"
+                class="field-avatar"
+                src="/static/img/camera.png"
+              />
+              <div id="upload1" class="centering">
+                <img
+                  id="small-cam-to-hide"
+                  src="/static/img/camera-small.png"
+                  style="display: none"
+                  class="small-camera"
+                />
+                <span class="upload-button" id="upload-text">Upload</span>
+              </div>
+              <input
+                id="getFile"
+                type="file"
+                style="display: none"
+                onchange="previewFile()"
+              />
+              <div
+                class="remove-block"
+                id="remove-button"
+                onclick="removeImg()"
+              >
+                <img src="/static/img/bucket.png" />
+                <span class="remove">Remove</span>
+              </div>
             </div>
             <span class="field-description">Publish date</span>
-            <input class="field-input" type="date">
+            <input class="field-input" type="date" id="field4" />
             <span class="field-description">Hero image</span>
-            <img class="field-hero-image" src="../static/img/hero-image.png">
-            <span class="extension-description">Size up to 10mb. Format: png, jpeg, gif.</span>
+            <img
+              id="img3"
+              class="field-hero-image"
+              src="/static/img/hero-image.png"
+            />
+            <input
+              id="getFile2"
+              type="file"
+              style="display: none"
+              onchange="previewHeroFile()"
+            />
+            <span
+              id="span1"
+              class="extension-description"
+              style="display: block"
+              >Size up to 10mb. Format: png, jpeg, gif.</span
+            >
+            <div class="centering upper-margin">
+              <div id="replace1" class="centering" style="display: none">
+                <img src="/static/img/camera-small.png" class="small-camera" />
+                <span class="upload-button">Upload new</span>
+              </div>
+              <div
+                class="remove-block"
+                id="remove-button1"
+                onclick="removeImg1()"
+                style="display: none"
+              >
+                <img src="/static/img/bucket.png" />
+                <span class="remove">Remove</span>
+              </div>
+            </div>
             <span class="field-description">Hero image</span>
-            <img class="small-field-hero-image" src="../static/img/small-hero-image.png">
-            <span class="extension-description">Size up to 5mb. Format: png, jpeg, gif.</span>
+            <img
+              class="small-field-hero-image"
+              src="/static/img/small-hero-image.png"
+            />
+            <span class="extension-description"
+              >Size up to 5mb. Format: png, jpeg, gif.</span
+            >
           </form>
           <div class="preview">
             <span class="field-description">Article preview</span>
@@ -65,59 +135,73 @@
                 <div class="upper-middle">
                   <div class="upper-center">
                     <div class="dots">
-                      <img src="../static/img/elipse.png" class="dot">
-                      <img src="../static/img/elipse.png" class="dot">
-                      <img src="../static/img/elipse.png" class="dot">
+                      <img src="/static/img/elipse.png" class="dot" />
+                      <img src="/static/img/elipse.png" class="dot" />
+                      <img src="/static/img/elipse.png" class="dot" />
                     </div>
                   </div>
                   <div class="preview-title">
                     <div class="preview-title__text">
                       <h3 class="preview-title__title">New Post</h3>
-                      <h4 class="preview-title__subtitle">Please, enter any description</h4>
+                      <h4 class="preview-title__subtitle">
+                        Please, enter any description
+                      </h4>
                     </div>
                   </div>
-                  <div class="preview-upper-image"></div>
+                  <img
+                    id="img4"
+                    src="/static/img/gray2.png"
+                    class="preview-upper-image"
+                  />
                 </div>
               </div>
               <div class="right-grad"></div>
               <div class="bottom-grad"></div>
             </div>
             <span class="field-description">Post card preview</span>
-            <div class="lower"> 
+            <div class="lower">
               <div class="lower-outer">
                 <div class="post-card">
                   <div class="preview-lower-image"></div>
                   <div class="preview-lower-title">
                     <h3 class="preview-lower-title__title">New Post</h3>
-                    <h4 class="preview-lower-title__subtitle">Please, enter any description</h4>
+                    <h4 class="preview-lower-title__subtitle">
+                      Please, enter any description
+                    </h4>
                   </div>
                   <div class="preview-lower-description">
                     <div class="author">
-                      <div class="avatar-preview"></div>
+                      <img
+                        class="avatar-preview"
+                        id="img2"
+                        src="/static/img/gray.png"
+                      />
                       <span class="author-name">Enter author name</span>
                     </div>
                     <span class="date">04/05/2023</span>
-                  </div> 
+                  </div>
                 </div>
               </div>
               <div class="right-grad"></div>
               <div class="bottom-grad"></div>
             </div>
           </div>
-        </div> 
+        </div>
       </div>
     </div>
+
     <div class="content">
       <div class="content__inside">
         <h2 class="content__title">Content</h2>
         <span class="field-description">Post content (plain text)</span>
         <form>
-          <textarea class="content-input" placeholder="Type anything you want ..."></textarea>
+          <textarea
+            class="content-input"
+            placeholder="Type anything you want ..."
+          ></textarea>
         </form>
       </div>
     </div>
-    <footer>
-
-    </footer>
+    <footer></footer>
   </body>
 </html>

@@ -26,9 +26,13 @@ func main() {
 	mux := mux.NewRouter()
 	mux.HandleFunc("/home", index(dbx))
 
+	mux.HandleFunc("/admin", admin(dbx))
+
 	mux.HandleFunc("/post/{postID}", post(dbx))
 
 	mux.PathPrefix("/static/").Handler(http.StripPrefix("/static/", http.FileServer(http.Dir("./static"))))
+
+	mux.PathPrefix("/scripts/").Handler(http.StripPrefix("/scripts/", http.FileServer(http.Dir("./scripts"))))
 
 	fmt.Println("Start server")
 	err = http.ListenAndServe(port, mux)
