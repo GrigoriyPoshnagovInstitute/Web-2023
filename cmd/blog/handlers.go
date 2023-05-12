@@ -148,6 +148,27 @@ func admin(db *sqlx.DB) func(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+func login(db *sqlx.DB) func(w http.ResponseWriter, r *http.Request) {
+	return func(w http.ResponseWriter, r *http.Request) {
+
+		ts, err := template.ParseFiles("pages/login.html")
+		if err != nil {
+			http.Error(w, "Internal Server Error", 500)
+			log.Println(err)
+			return
+		}
+
+		err = ts.Execute(w, post)
+		if err != nil {
+			http.Error(w, "Internal Server Error", 500)
+			log.Println(err)
+			return
+		}
+
+		log.Println("Request completed successfully")
+	}
+}
+
 func featuredPosts(db *sqlx.DB) ([]featuredPostData, error) {
 	const query = `
 		SELECT
