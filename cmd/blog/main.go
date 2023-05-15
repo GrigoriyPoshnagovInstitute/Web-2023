@@ -12,7 +12,7 @@ import (
 )
 
 const (
-	port         = ":3000"
+	port         = ":3005"
 	dbDriverName = "mysql"
 )
 
@@ -33,8 +33,6 @@ func main() {
 	mux.HandleFunc("/post/{postID}", post(dbx))
 
 	mux.PathPrefix("/static/").Handler(http.StripPrefix("/static/", http.FileServer(http.Dir("./static"))))
-
-	mux.PathPrefix("/scripts/").Handler(http.StripPrefix("/scripts/", http.FileServer(http.Dir("./scripts"))))
 
 	fmt.Println("Start server")
 	err = http.ListenAndServe(port, mux)

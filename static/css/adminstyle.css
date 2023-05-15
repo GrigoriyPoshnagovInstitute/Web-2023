@@ -154,9 +154,9 @@ textarea {
 .field-input {
   background-color: #ffffff;
   height: 40px;
-  border-color: #000000;
+  border-color: #eaeaea;
   border-width: 0;
-  border-bottom-width: 2px;
+  border-bottom-width: 1px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   font-family: Oxygen;
@@ -334,7 +334,6 @@ textarea {
   width: 296px;
   background-color: #f7f7f7;
   object-fit: cover;
-  
 }
 .preview-lower-title {
   height: 72px;
@@ -450,7 +449,6 @@ textarea {
   justify-content: center;
   align-items: center;
   margin-left: 20px;
-  display: none;
   cursor: pointer;
 }
 
@@ -462,7 +460,7 @@ textarea {
 
 .small-camera {
   margin-right: 9px;
-  display: none;
+  display: block;
 }
 
 .small-hero-camera {
@@ -475,4 +473,14 @@ textarea {
 
 .hidden {
   display: none;
+}
+
+.field-input-empty {
+  border-color: #eaeaea;
+  background-color: #ffffff;
+}
+
+.field-input-not-empty {
+  border-color: #2e2e2e;
+  background-color: #f7f7f7;
 }

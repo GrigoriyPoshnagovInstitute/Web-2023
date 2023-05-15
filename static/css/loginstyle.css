@@ -1,29 +1,37 @@
-.page
-{
+.page {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 100vh;
+  width: 100wh;
   margin: 0px;
   padding: 0px;
   background-image: url("/static/img/psheno.jpg");
   background-size: cover;
+  position: relative;
 }
-.logo
-{
+.page::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 100%;
+  height: inherit;
+  background-color: black;
+  opacity: 0.4;
+}
+.logo {
   height: 85px;
   width: 380px;
   margin-left: 16%;
   display: flex;
   flex-direction: column;
+  z-index: 1;
 }
-.logo__upper
-{
+.logo__upper {
   width: 232px;
   height: 51px;
 }
-.logination
-{
+.logination {
   height: 504px;
   width: 400px;
   background-color: rgba(255, 255, 255, 1);
@@ -34,26 +42,23 @@
   padding-right: 40px;
   display: flex;
   flex-direction: column;
+  z-index: 1;
 }
-.title
-{
+.title {
   font-family: Lora;
   font-size: 34px;
   font-weight: 400;
   text-align: left;
   margin-bottom: 10px;
 }
-.form
-{
+.form {
   display: flex;
   flex-direction: column;
 }
-input:focus
-{
+input:focus {
   outline: none;
 }
-.naming
-{
+.field-title {
   font-family: Oxygen;
   font-size: 12px;
   font-weight: 400;
@@ -61,8 +66,7 @@ input:focus
   margin-top: 40px;
   margin-bottom: 5px;
 }
-.field
-{
+.field {
   height: 40px;
   width: 396px;
   border-style: solid;
@@ -76,8 +80,7 @@ input:focus
   font-size: 16px;
   font-weight: 400;
 }
-.button
-{
+.button {
   background-color: rgba(221, 120, 63, 1);
   height: 48px;
   width: 93px;
@@ -86,23 +89,30 @@ input:focus
   font-family: Oxygen;
   font-size: 16px;
   font-weight: 400;
-  display: flex; 
+  display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 40px;
 }
-.slogan
-{
+.slogan {
   margin-top: 16px;
   font-family: Oxygen;
   color: rgba(255, 255, 255, 1);
   font-size: 17px;
   font-weight: 400;
 }
-.eye
-{
+.eye {
   margin-top: -120px;
   margin-left: 371px;
   width: 24px;
   height: 24px;
+}
+.field-input-empty {
+  border-color: #eaeaea;
+  background-color: #ffffff;
+}
+
+.field-input-not-empty {
+  border-color: #2e2e2e;
+  background-color: #f7f7f7;
 }

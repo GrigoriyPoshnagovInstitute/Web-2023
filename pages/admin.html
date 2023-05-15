@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script src="/scripts/script2.js" async></script>
+    <script src="/static/js/script2.js" async></script>
     <meta charset="UTF-8" />
     <title>admin</title>
     <link rel="stylesheet" type="text/css" href="/static/css/adminstyle.css" />
@@ -48,11 +48,23 @@
         <div class="main-information">
           <form class="new-post__form">
             <span class="field-description">Title</span>
-            <input class="field-input" type="text" id="title-field"/>
+            <input
+              class="field-input field-input-empty"
+              type="text"
+              id="title-field"
+            />
             <span class="field-description">Short description</span>
-            <input class="field-input" type="text" id="description-field"/>
-            <span class="field-description" >Author name</span>
-            <input class="field-input" type="text" id="name-field"/>
+            <input
+              class="field-input field-input-empty"
+              type="text"
+              id="description-field"
+            />
+            <span class="field-description">Author name</span>
+            <input
+              class="field-input field-input-empty"
+              type="text"
+              id="name-field"
+            />
             <span class="field-description">Author photo</span>
             <div class="upload-image">
               <img
@@ -63,51 +75,44 @@
               <div class="centering">
                 <img
                   src="/static/img/camera-small.png"
-                  class="small-camera"
+                  class="small-camera hidden"
                   id="small-camera-avatar"
                 />
-                <span class="upload-button" id="upload-avatar-button">Upload</span>
+                <span class="upload-button" id="upload-avatar-button"
+                  >Upload</span
+                >
               </div>
-              <input
-                type="file"
-                class="hidden"
-                id="upload-avatar-hidden"
-              />
-              <div
-                class="remove-block"
-                id="remove-avatar"
-              >
+              <input type="file" class="hidden" id="upload-avatar-hidden" />
+              <div class="remove-block hidden" id="remove-avatar">
                 <img src="/static/img/bucket.png" />
                 <span class="remove">Remove</span>
               </div>
             </div>
             <span class="field-description">Publish date</span>
-            <input class="field-input" type="date" id="date-field"/>
+            <input
+              class="field-input field-input-empty"
+              type="date"
+              id="date-field"
+            />
             <span class="field-description">Hero image</span>
             <img
               class="field-hero-image"
               src="/static/img/hero-image.png"
               id="hero-field"
             />
-            <input
-              type="file"
-              class="hidden"
-              id="upload-hero-hidden"
-            />
-            <span
-              class="extension-description"
-              id="format-information"
+            <input type="file" class="hidden" id="upload-hero-hidden" />
+            <span class="extension-description" id="format-information"
               >Size up to 10mb. Format: png, jpeg, gif.</span
             >
             <div class="centering upper-margin">
               <div class="centering hidden" id="upload-hero-button">
-                <img src="/static/img/camera-small.png" class="small-hero-camera" />
+                <img
+                  src="/static/img/camera-small.png"
+                  class="small-hero-camera"
+                />
                 <span class="upload-button">Upload new</span>
               </div>
-              <div
-                class="remove-block"
-                id="remove-hero"
-              >
+              <div class="remove-block hidden" id="remove-hero">
                 <img src="/static/img/bucket.png" />
                 <span class="remove">Remove</span>
               </div>
@@ -127,8 +132,13 @@
                   </div>
                   <div class="preview-title">
                     <div class="preview-title__text">
-                      <h3 class="preview-title__title" id="preview-title">New Post</h3>
-                      <h4 class="preview-title__subtitle" id="preview-description">
+                      <h3 class="preview-title__title" id="preview-title">
+                        New Post
+                      </h3>
+                      <h4
+                        class="preview-title__subtitle"
+                        id="preview-description"
+                      >
                         Please, enter any description
                       </h4>
                     </div>
@@ -147,10 +157,19 @@
             <div class="lower">
               <div class="lower-outer">
                 <div class="post-card">
-                  <img class="preview-lower-image" src="/static/img/gray3.png" id="card-image"/>
+                  <img
+                    class="preview-lower-image"
+                    src="/static/img/gray3.png"
+                    id="card-image"
+                  />
                   <div class="preview-lower-title">
-                    <h3 class="preview-lower-title__title" id="card-title">New Post</h3>
-                    <span class="preview-lower-title__subtitle" id="card-description">
+                    <h3 class="preview-lower-title__title" id="card-title">
+                      New Post
+                    </h3>
+                    <span
+                      class="preview-lower-title__subtitle"
+                      id="card-description"
+                    >
                       Please, enter any description
                     </span>
                   </div>
@@ -161,9 +180,11 @@
                         src="/static/img/gray.png"
                         id="card-avatar"
                       />
-                      <span class="author-name" id="card-name">Enter author name</span>
+                      <span class="author-name" id="card-name"
+                        >Enter author name</span
+                      >
                     </div>
-                    <span class="date" id="card-date">04/05/2023</span>
+                    <span class="date" id="card-date">mm/dd/yyyy</span>
                   </div>
                 </div>
               </div>
@@ -188,6 +209,5 @@
         </form>
       </div>
     </div>
-    <footer></footer>
   </body>
 </html>
