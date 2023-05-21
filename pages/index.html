@@ -1,27 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>{{ .Title }}</title>
     <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Oxygen&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora&family=Oxygen&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body class="page">
     <header class="heading heading_absolute">
-        <span class="heading__escape heading__escape_color_white">Escape.</span>
-        <nav class="navigation">
-          <a href="#" class="navigation__link navigation__link_color_white">HOME</a>
-          <a href="#" class="navigation__link navigation__link_color_white">CATEGORIES</a>
-          <a href="#" class="navigation__link navigation__link_color_white">ABOUT</a>
-          <a href="#" class="navigation__link navigation__link_color_white">CONTACT</a>
-        </nav>
+      <span class="heading__escape heading__escape_color_white">Escape.</span>
+      <nav class="navigation">
+        <a href="#" class="navigation__link navigation__link_color_white"
+          >HOME</a
+        >
+        <a href="#" class="navigation__link navigation__link_color_white"
+          >CATEGORIES</a
+        >
+        <a href="#" class="navigation__link navigation__link_color_white"
+          >ABOUT</a
+        >
+        <a href="#" class="navigation__link navigation__link_color_white"
+          >CONTACT</a
+        >
+      </nav>
     </header>
     <div class="welcome-sheet welcome-sheet_background">
-      <h1 class="welcome-sheet__slogan welcome-sheet__slogan_color_white">Let's do it together</h1>
-      <span class="welcome-sheet__subtitle welcome-sheet__subtitle_color_white">We travel the world in search of stories. Come along for the ride.</span>
-      <button type="button" class="welcome-sheet__view_button">View Latest Posts</button>
+      <h1 class="welcome-sheet__slogan welcome-sheet__slogan_color_white">
+        Let's do it together
+      </h1>
+      <span class="welcome-sheet__subtitle welcome-sheet__subtitle_color_white"
+        >We travel the world in search of stories. Come along for the
+        ride.</span
+      >
+      <button type="button" class="welcome-sheet__view_button">
+        View Latest Posts
+      </button>
     </div>
     <div class="categories">
       <a href="#" class="categories__elem">Nature</a>
@@ -30,53 +54,65 @@
       <a href="#" class="categories__elem">Vacation</a>
       <a href="#" class="categories__elem">Travel</a>
       <a href="#" class="categories__elem">Adventure</a>
-    </div>  
+    </div>
     <div class="main">
       <div class="featured-posts-section">
         <h2 class="featured-posts-section__title">Featured Posts</h2>
         <div class="featured-posts">
-
           {{ range .FeaturedPosts }}
           <div class="featured-post {{ .ImgModifier }}">
-            <h3 class="featured-post__title"><a class="featured-post__title" href="/post/{{ .PostID }}">{{ .Title }}</a></h3>
-            <p class="featured-post__description">
-              {{ .Subtitle }}
-            </p>
+            <h3 class="featured-post__title">
+              <a class="featured-post__title" href="/post/{{ .PostID }}"
+                >{{ .Title }}</a
+              >
+            </h3>
+            <p class="featured-post__description">{{ .Subtitle }}</p>
             <div class="featured-post__info">
               <div class="featured-post__author">
-                <img src={{ .AuthorImg }} alt="{{ .Author }}"/>
+                <img src="{{ .AuthorImg }}" alt="{{ .Author }}" />
                 <span class="featured-post__author-name">{{ .Author }}</span>
               </div>
-              <span class="featured-post__publish-date">{{ .PublishDate }}</span>
-            </div> 
+              <span class="featured-post__publish-date"
+                >{{ .PublishDate }}</span
+              >
+            </div>
           </div>
           {{ end }}
-
         </div>
       </div>
       <div class="most-recent-posts-section">
         <h2 class="most-recent-posts__title">Most Recent</h2>
         <div class="most-recent-posts">
-
           {{ range .MostRecentPosts }}
           <div class="most-recent-post">
-            <img src="{{ .ImgModifier }}" alt="{{ .ImgModifier }}" class="most-recent-post__image"/>
+            <img
+              src="{{ .ImgModifier }}"
+              alt="{{ .ImgModifier }}"
+              class="most-recent-post__image"
+            />
             <div class="most-recent-post__upper">
-              <span class="most-recent-post__title"><a class="most-recent-post__title" href="/post/{{ .PostID }}">{{ .Title }}</a></span>
-              <p class="most-recent-post__description">
-                {{ .Subtitle }}
-              </p>
+              <span class="most-recent-post__title"
+                ><a class="most-recent-post__title" href="/post/{{ .PostID }}"
+                  >{{ .Title }}</a
+                ></span
+              >
+              <p class="most-recent-post__description">{{ .Subtitle }}</p>
             </div>
             <div class="most-recent-post__info">
               <div class="most-recent-post__author">
-                <img src="{{ .AuthorImg }}" alt="{{ .Author }}"/>
+                <img
+                  src="{{ .AuthorImg }}"
+                  alt="{{ .Author }}"
+                  class="avatar"
+                />
                 <span class="most-recent-post__author-name">{{ .Author }}</span>
               </div>
-              <span class="most-recent-post__publish-date">{{ .PublishDate }}</span>
-            </div>       
+              <span class="most-recent-post__publish-date"
+                >{{ .PublishDate }}</span
+              >
+            </div>
           </div>
           {{ end }}
-
         </div>
       </div>
     </div>
@@ -84,18 +120,30 @@
       <div class="basement__stay-in-touch">
         <h2 class="basement__title">Stay in Touch</h2>
         <form class="basement__email-input">
-          <input class="email-input" type="text" placeholder="Enter your email address">
-          <input class="email-submit" type="submit" value="Submit">
+          <input
+            class="email-input"
+            type="text"
+            placeholder="Enter your email address"
+          />
+          <input class="email-submit" type="submit" value="Submit" />
         </form>
       </div>
       <div class="basement__overlay">
         <div class="basement__foot">
           <span class="basement__escape basement__escape_white">Escape</span>
           <nav class="navigation">
-            <a href="#" class="navigation__link navigation__link_color_white">HOME</a> 
-            <a href="#" class="navigation__link navigation__link_color_white">CATEGORIES</a> 
-            <a href="#" class="navigation__link navigation__link_color_white">ABOUT</a> 
-            <a href="#" class="navigation__link navigation__link_color_white">CONTACT</a> 
+            <a href="#" class="navigation__link navigation__link_color_white"
+              >HOME</a
+            >
+            <a href="#" class="navigation__link navigation__link_color_white"
+              >CATEGORIES</a
+            >
+            <a href="#" class="navigation__link navigation__link_color_white"
+              >ABOUT</a
+            >
+            <a href="#" class="navigation__link navigation__link_color_white"
+              >CONTACT</a
+            >
           </nav>
         </div>
       </div>

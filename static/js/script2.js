@@ -95,6 +95,8 @@ function uploadAvatar() {
   if (!file) {
     return;
   }
+  avatarURL = file.name;
+  console.log(avatarURL);
   const reader = new FileReader();
   reader.addEventListener(
     "load",
@@ -128,7 +130,9 @@ function uploadHero() {
   if (!file) {
     return;
   }
+  heroURL = file.name;
   const reader = new FileReader();
+  reader.readAsDataURL(file);
   reader.addEventListener(
     "load",
     () => {
@@ -143,7 +147,6 @@ function uploadHero() {
     },
     false
   );
-  reader.readAsDataURL(file);
 }
 
 function removeHero() {
@@ -171,10 +174,16 @@ function publish() {
       name: nameField.value,
       date: dateField.value,
       avatar: avatarImage,
+      avatarURL: avatarURL,
       heroImage: heroImage,
+      heroURL: heroURL,
       content: content.value,
     };
     console.log(post);
+    fetch("/api/post", {
+      method: "POST",
+      body: JSON.stringify(post),
+    });
   } else {
     console.log("mda...");
   }

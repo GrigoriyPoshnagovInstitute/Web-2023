@@ -2,12 +2,17 @@ package main
 
 import (
 	"database/sql"
+	"fmt"
 	"html/template"
 	"log"
 	"net/http"
+	"os"
 	"strconv"
 
 	"github.com/gorilla/mux"
+
+	"encoding/base64"
+	"encoding/json"
 
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/jmoiron/sqlx"
@@ -37,6 +42,18 @@ type mostRecentPostData struct {
 	Author      string `db:"author"`
 	AuthorImg   string `db:"author_url"`
 	PublishDate string `db:"publish_date"`
+}
+
+type parsedPostData struct {
+	Title       string `json:"title"`
+	Subtitle    string `json:"description"`
+	PublishDate string `json:"date"`
+	AuthorImg   string `json:"avatar"`
+	AvatarURL   string `json:"avatarURL"`
+	Author      string `json:"name"`
+	HeroImg     string `json:"heroImage"`
+	HeroURL     string `json:"heroURL"`
+	Content     string `json:"content"`
 }
 
 type postData struct {
@@ -166,6 +183,102 @@ func login(db *sqlx.DB) func(w http.ResponseWriter, r *http.Request) {
 		}
 
 		log.Println("Request completed successfully")
+	}
+}
+
+func sendPost(db *sqlx.DB) func(w http.ResponseWriter, r *http.Request) {
+	return func(w http.ResponseWriter, r *http.Request) {
+		var data parsedPostData
+		err := json.NewDecoder(r.Body).Decode(&data)
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusBadRequest)
+			return
+		}
+
+		var lastID int64
+		err = db.Get(&lastID, "SELECT MAX(post_id) FROM post")
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+			return
+		}
+		newID := lastID + 1
+
+		avatarSavePath := "C:/WEB/static/img/" + data.AvatarURL
+
+		fmt.Println(avatarSavePath)
+
+		avatarImage, err := base64.StdEncoding.DecodeString(data.AuthorImg)
+		if err != nil {
+			fmt.Println("Ошибка декодирования изображения:", err)
+			return
+		}
+
+		file, err := os.Create(avatarSavePath)
+		if err != nil {
+			fmt.Println("Ошибка создания файла:", err)
+			return
+		}
+		defer file.Close()
+
+		_, err = file.Write(avatarImage)
+		if err != nil {
+			fmt.Println("Ошибка сохранения изображения:", err)
+			return
+		}
+
+		fmt.Println("Изображение успешно сохранено.")
+
+		heroSavePath := "C:/WEB/static/img/" + data.HeroURL
+
+		heroImage, err := base64.StdEncoding.DecodeString(data.HeroImg)
+		if err != nil {
+			fmt.Println("Ошибка декодирования изображения:", err)
+			return
+		}
+
+		file, err = os.Create(heroSavePath)
+		if err != nil {
+			fmt.Println("Ошибка создания файла:", err)
+			return
+		}
+		defer file.Close()
+
+		_, err = file.Write(heroImage)
+		if err != nil {
+			fmt.Println("Ошибка сохранения изображения:", err)
+			return
+		}
+
+		fmt.Println("Изображение успешно сохранено.")
+
+		const query = `
+		INSERT INTO 
+			post (
+				post_id,
+				title,
+				subtitle,
+				content,
+				image_url,
+				image_modifier,
+				publish_date, 
+				author_url, 
+				author, 
+				featured
+			)
+		VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+		`
+
+		_, err = db.Exec(query, newID, data.Title, data.Subtitle, data.Content, "/static/img/"+data.HeroURL, "", data.PublishDate, "static/img/"+data.AvatarURL, data.Author, 0)
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+			return
+		}
+		var upperPosts []featuredPostData
+
+		db.Select(&upperPosts, query)
+
+		log.Println("Request completed successfully")
+
 	}
 }
 
