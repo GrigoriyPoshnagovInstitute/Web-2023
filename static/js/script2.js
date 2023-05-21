@@ -23,6 +23,15 @@ const previewDescription = document.querySelector("#preview-description");
 const cardDescription = document.querySelector("#card-description");
 const cardName = document.querySelector("#card-name");
 const cardDate = document.querySelector("#card-date");
+const oops = document.querySelector("#oops");
+const huzzar = document.querySelector("#huzzar");
+const titleError = document.querySelector("#title-error");
+const descriptionError = document.querySelector("#description-error");
+const nameError = document.querySelector("#name-error");
+const avatarError = document.querySelector("#avatar-error");
+const dateError = document.querySelector("#date-error");
+const heroError = document.querySelector("#hero-error");
+const contentError = document.querySelector("#content-error");
 
 let avatarImage = "";
 let heroImage = "";
@@ -39,11 +48,14 @@ uploadHeroButton.addEventListener("click", clickUploadHero);
 uploadHeroHidden.addEventListener("change", uploadHero);
 removeHeroButton.addEventListener("click", removeHero);
 publishButton.addEventListener("click", publish);
+content.addEventListener("input", inputContent);
 
 function inputTitle() {
   if (titleField.value) {
     titleField.classList.remove("field-input-empty");
     titleField.classList.add("field-input-not-empty");
+    titleError.classList.remove("error-appear");
+    titleField.classList.remove("error-field");
   } else {
     titleField.classList.remove("field-input-not-empty");
     titleField.classList.add("field-input-empty");
@@ -56,6 +68,8 @@ function inputDescription() {
   if (descriptionField.value) {
     descriptionField.classList.remove("field-input-empty");
     descriptionField.classList.add("field-input-not-empty");
+    descriptionError.classList.remove("error-appear");
+    descriptionField.classList.remove("error-field");
   } else {
     descriptionField.classList.remove("field-input-not-empty");
     descriptionField.classList.add("field-input-empty");
@@ -68,6 +82,8 @@ function inputName() {
   if (nameField.value) {
     nameField.classList.remove("field-input-empty");
     nameField.classList.add("field-input-not-empty");
+    nameError.classList.remove("error-appear");
+    nameField.classList.remove("error-field");
   } else {
     nameField.classList.remove("field-input-not-empty");
     nameField.classList.add("field-input-empty");
@@ -79,11 +95,18 @@ function inputDate() {
   if (dateField.value) {
     dateField.classList.remove("field-input-empty");
     dateField.classList.add("field-input-not-empty");
+    dateError.classList.remove("error-appear");
+    dateField.classList.remove("error-field");
+    cardDate.innerHTML = dateField.valueAsDate.toLocaleDateString("en-US");
   } else {
     dateField.classList.remove("field-input-not-empty");
     dateField.classList.add("field-input-empty");
   }
-  cardDate.innerHTML = dateField.valueAsDate.toLocaleDateString("en-US");
+}
+
+function inputContent() {
+  contentError.classList.remove("error-appear");
+  content.classList.remove("error-field");
 }
 
 function clickUploadAvatar() {
@@ -95,6 +118,7 @@ function uploadAvatar() {
   if (!file) {
     return;
   }
+  avatarError.classList.remove("error-appear");
   avatarURL = file.name;
   console.log(avatarURL);
   const reader = new FileReader();
@@ -119,6 +143,7 @@ function removeAvatar() {
   smallCamera.classList.add("hidden");
   removeAvatarButton.classList.add("hidden");
   uploadAvatarButton.innerHTML = "Upload";
+  avatarImage = "";
 }
 
 function clickUploadHero() {
@@ -130,6 +155,7 @@ function uploadHero() {
   if (!file) {
     return;
   }
+  heroError.classList.remove("error-appear");
   heroURL = file.name;
   const reader = new FileReader();
   reader.readAsDataURL(file);
@@ -156,6 +182,38 @@ function removeHero() {
   uploadHeroButton.classList.add("hidden");
   removeHeroButton.classList.add("hidden");
   formatInformation.classList.remove("hidden");
+  heroImage = "";
+}
+
+function pub() {
+  oops.classList.add("height-44");
+  huzzar.classList.remove("height-44");
+  if (titleField.value == "") {
+    titleError.classList.add("error-appear");
+    titleField.classList.add("error-field");
+  }
+  if (descriptionField.value == "") {
+    descriptionError.classList.add("error-appear");
+    descriptionField.classList.add("error-field");
+  }
+  if (nameField.value == "") {
+    nameError.classList.add("error-appear");
+    nameField.classList.add("error-field");
+  }
+  if (avatarImage == "") {
+    avatarError.classList.add("error-appear");
+  }
+  if (dateField.value == "") {
+    dateError.classList.add("error-appear");
+    dateField.classList.add("error-field");
+  }
+  if (heroImage == "") {
+    heroError.classList.add("error-appear");
+  }
+  if (content.value == "") {
+    contentError.classList.add("error-appear");
+    content.classList.add("error-field");
+  }
 }
 
 function publish() {
@@ -168,6 +226,8 @@ function publish() {
     heroImage != "" &&
     content.value != ""
   ) {
+    oops.classList.remove("height-44");
+    huzzar.classList.add("height-44");
     const post = {
       title: titleField.value,
       description: descriptionField.value,
@@ -185,6 +245,6 @@ function publish() {
       body: JSON.stringify(post),
     });
   } else {
-    console.log("mda...");
+    pub();
   }
 }

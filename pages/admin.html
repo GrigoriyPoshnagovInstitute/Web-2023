@@ -43,6 +43,16 @@
           <button class="publish" id="publish-button">Publish</button>
         </div>
       </div>
+      <div class="oops-window" id="oops">
+        <img src="static/img/alert-circle.png" class="img-shrink" />
+        <span class="text-shrink"
+          >Whoops! Some fields need your attention :o</span
+        >
+      </div>
+      <div class="huzzar-window" id="huzzar">
+        <img src="static/img/check-circle.png" class="img-shrink" />
+        <span class="text-shrink">Publish Complete!</span>
+      </div>
       <div class="new-post__window">
         <span class="main-information__title">Main Information</span>
         <div class="main-information">
@@ -54,6 +64,7 @@
               id="title-field"
               placeholder="Enter your title"
             />
+            <span class="error" id="title-error">Title required</span>
             <span class="field-description">Short description</span>
             <input
               class="field-input field-input-empty"
@@ -61,6 +72,9 @@
               id="description-field"
               placeholder="Enter your description"
             />
+            <span class="error" id="description-error"
+              >Description required</span
+            >
             <span class="field-description">Author name</span>
             <input
               class="field-input field-input-empty"
@@ -68,6 +82,7 @@
               id="name-field"
               placeholder="Enter your name"
             />
+            <span class="error" id="name-error">Author name required</span>
             <span class="field-description">Author photo</span>
             <div class="upload-image">
               <img
@@ -91,12 +106,14 @@
                 <span class="remove">Remove</span>
               </div>
             </div>
+            <span class="error" id="avatar-error">Avatar required</span>
             <span class="field-description">Publish date</span>
             <input
               class="field-input field-input-empty"
               type="date"
               id="date-field"
             />
+            <span class="error" id="date-error">Date required</span>
             <span class="field-description">Hero image</span>
             <img
               class="field-hero-image"
@@ -104,6 +121,7 @@
               id="hero-field"
             />
             <input type="file" class="hidden" id="upload-hero-hidden" />
+            <span class="error" id="hero-error">Hero image required</span>
             <span class="extension-description" id="format-information"
               >Size up to 10mb. Format: png, jpeg, gif.</span
             >
@@ -210,6 +228,7 @@
             id="content"
           ></textarea>
         </form>
+        <span class="error" id="content-error">Content required</span>
       </div>
     </div>
   </body>

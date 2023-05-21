@@ -2,20 +2,37 @@ const email = document.getElementById("email");
 const password = document.getElementById("password");
 const eye = document.getElementById("eye");
 const loginButton = document.getElementById("login");
+const emailError = document.getElementById("email-error");
+const passwordError = document.getElementById("password-error");
+const oops = document.getElementById("oops");
 
-email.addEventListener("input", inputField);
-password.addEventListener("input", inputField);
+email.addEventListener("input", emailInputField);
+password.addEventListener("input", passwordInputField);
 eye.addEventListener("click", hide);
 loginButton.addEventListener("click", login);
 
-function inputField(event) {
-  const elem = event.target;
-  if (elem.value) {
-    elem.classList.remove("field-input-empty");
-    elem.classList.add("field-input-not-empty");
+function emailInputField(event) {
+  if (email.value) {
+    email.classList.remove("field-input-empty");
+    email.classList.add("field-input-not-empty");
+    emailError.classList.remove("error-appear");
+    email.classList.remove("error-field");
   } else {
-    elem.classList.remove("field-input-not-empty");
-    elem.classList.add("field-input-empty");
+    email.classList.remove("field-input-not-empty");
+    email.classList.add("field-input-empty");
+  }
+}
+
+function passwordInputField(event) {
+  if (password.value) {
+    password.classList.remove("field-input-empty");
+    password.classList.add("field-input-not-empty");
+    passwordError.classList.remove("error-appear");
+    password.classList.remove("error-field");
+    eye.classList.remove("error-eye");
+  } else {
+    password.classList.remove("field-input-not-empty");
+    password.classList.add("field-input-empty");
   }
 }
 
@@ -27,6 +44,19 @@ function hide() {
   }
 }
 
+function logi() {
+  oops.classList.add("height-44");
+  if (email.value == "") {
+    emailError.classList.add("error-appear");
+    email.classList.add("error-field");
+  }
+  if (password.value == "") {
+    passwordError.classList.add("error-appear");
+    password.classList.add("error-field");
+    eye.classList.add("error-eye");
+  }
+}
+
 function login() {
   if (email.value != "" && password.value != "") {
     const logi = {
@@ -34,7 +64,8 @@ function login() {
       password: password.value,
     };
     console.log(logi);
+    oops.classList.remove("height-44");
   } else {
-    console.log("mda...");
+    logi();
   }
 }

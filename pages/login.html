@@ -3,7 +3,7 @@
   <head>
     <script src="/static/js/script3.js" async></script>
     <meta charset="UTF-8" />
-    <title>admin</title>
+    <title>login</title>
     <link rel="stylesheet" type="text/css" href="/static/css/loginstyle.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Lora&display=swap"
@@ -21,11 +21,17 @@
     </div>
     <div class="logination">
       <span class="title">Log In</span>
+      <div class="oops-window" id="oops">
+        <img src="static/img/alert-circle.png" class="img-shrink" />
+        <span class="text-shrink">A-Ah! Check all fields,</span>
+      </div>
       <form class="form">
         <span class="field-title">Email</span>
         <input type="text field-input-empty" class="field" id="email" />
+        <span class="error" id="email-error">Email required</span>
         <span class="field-title">Password</span>
         <input type="password field-input-empty" class="field" id="password" />
+        <span class="error" id="password-error">Password required</span>
         <span class="button" id="login">Log in</span>
         <img src="/static/img/eye.png" class="eye" id="eye" />
       </form>
