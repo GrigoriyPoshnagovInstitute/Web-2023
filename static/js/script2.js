@@ -50,6 +50,17 @@ removeHeroButton.addEventListener("click", removeHero);
 publishButton.addEventListener("click", publish);
 content.addEventListener("input", inputContent);
 
+titleField.addEventListener("click", removeErrors);
+descriptionField.addEventListener("click", removeErrors);
+nameField.addEventListener("click", removeErrors);
+dateField.addEventListener("click", removeErrors);
+content.addEventListener("click", removeErrors);
+
+function removeErrors() {
+  huzzar.classList.remove("height-44");
+  oops.classList.remove("height-44");
+}
+
 function inputTitle() {
   if (titleField.value) {
     titleField.classList.remove("field-input-empty");
@@ -110,6 +121,7 @@ function inputContent() {
 }
 
 function clickUploadAvatar() {
+  removeErrors();
   document.querySelector("#upload-avatar-hidden").click();
 }
 
@@ -147,6 +159,7 @@ function removeAvatar() {
 }
 
 function clickUploadHero() {
+  removeErrors();
   document.querySelector("#upload-hero-hidden").click();
 }
 

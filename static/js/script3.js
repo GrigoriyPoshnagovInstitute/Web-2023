@@ -11,6 +11,11 @@ password.addEventListener("input", passwordInputField);
 eye.addEventListener("click", hide);
 loginButton.addEventListener("click", login);
 
+function isValidEmail(email) {
+  let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+
 function emailInputField(event) {
   if (email.value) {
     email.classList.remove("field-input-empty");
@@ -46,7 +51,8 @@ function hide() {
 
 function logi() {
   oops.classList.add("height-44");
-  if (email.value == "") {
+  const isValid = isValidEmail(email.value);
+  if (!isValid) {
     emailError.classList.add("error-appear");
     email.classList.add("error-field");
   }
@@ -58,7 +64,8 @@ function logi() {
 }
 
 function login() {
-  if (email.value != "" && password.value != "") {
+  const isValid = isValidEmail(email.value);
+  if (isValid && password.value != "") {
     const logi = {
       email: email.value,
       password: password.value,
