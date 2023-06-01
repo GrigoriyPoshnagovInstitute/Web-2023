@@ -12,7 +12,7 @@ import (
 )
 
 const (
-	port         = ":3005"
+	port         = ":3008"
 	dbDriverName = "mysql"
 )
 
@@ -30,7 +30,7 @@ func main() {
 
 	mux.HandleFunc("/login", login(dbx))
 
-	mux.HandleFunc("/api/post", sendPost(dbx))
+	mux.HandleFunc("/api/post", publishPost(dbx))
 
 	mux.HandleFunc("/post/{postID}", post(dbx))
 

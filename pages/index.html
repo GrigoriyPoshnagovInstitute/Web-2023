@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>{{ .Title }}</title>
-    <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/homestyle.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Lora&display=swap"
       rel="stylesheet"
@@ -20,7 +20,7 @@
   <body class="page">
     <header class="heading heading_absolute">
       <span class="heading__escape heading__escape_color_white">Escape.</span>
-      <nav class="navigation">
+      <nav class="navigation hide">
         <a href="#" class="navigation__link navigation__link_color_white"
           >HOME</a
         >
@@ -34,6 +34,11 @@
           >CONTACT</a
         >
       </nav>
+      <div class="burger">
+        <div class="strike"></div>
+        <div class="strike"></div>
+        <div class="strike"></div>
+      </div>
     </header>
     <div class="welcome-sheet welcome-sheet_background">
       <h1 class="welcome-sheet__slogan welcome-sheet__slogan_color_white">
@@ -131,17 +136,25 @@
       <div class="basement__overlay">
         <div class="basement__foot">
           <span class="basement__escape basement__escape_white">Escape</span>
-          <nav class="navigation">
-            <a href="#" class="navigation__link navigation__link_color_white"
+          <nav class="navigation column">
+            <a
+              href="#"
+              class="navigation__link navigation__link_color_white dull"
               >HOME</a
             >
-            <a href="#" class="navigation__link navigation__link_color_white"
+            <a
+              href="#"
+              class="navigation__link navigation__link_color_white dull"
               >CATEGORIES</a
             >
-            <a href="#" class="navigation__link navigation__link_color_white"
+            <a
+              href="#"
+              class="navigation__link navigation__link_color_white dull"
               >ABOUT</a
             >
-            <a href="#" class="navigation__link navigation__link_color_white"
+            <a
+              href="#"
+              class="navigation__link navigation__link_color_white dull"
               >CONTACT</a
             >
           </nav>

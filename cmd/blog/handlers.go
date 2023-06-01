@@ -49,10 +49,10 @@ type parsedPostData struct {
 	Subtitle    string `json:"description"`
 	PublishDate string `json:"date"`
 	AuthorImg   string `json:"avatar"`
-	AvatarURL   string `json:"avatarURL"`
+	AvatarName  string `json:"avatarURL"`
 	Author      string `json:"name"`
 	HeroImg     string `json:"heroImage"`
-	HeroURL     string `json:"heroURL"`
+	HeroName    string `json:"heroURL"`
 	Content     string `json:"content"`
 }
 
@@ -186,7 +186,7 @@ func login(db *sqlx.DB) func(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-func sendPost(db *sqlx.DB) func(w http.ResponseWriter, r *http.Request) {
+func publishPost(db *sqlx.DB) func(w http.ResponseWriter, r *http.Request) {
 	return func(w http.ResponseWriter, r *http.Request) {
 		var data parsedPostData
 		err := json.NewDecoder(r.Body).Decode(&data)
@@ -195,91 +195,84 @@ func sendPost(db *sqlx.DB) func(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 
-		var lastID int64
-		err = db.Get(&lastID, "SELECT MAX(post_id) FROM post")
+		err = saveImage(data.AvatarName, data.AuthorImg)
 		if err != nil {
-			http.Error(w, err.Error(), http.StatusInternalServerError)
+			http.Error(w, err.Error(), http.StatusBadRequest)
 			return
 		}
-		newID := lastID + 1
-
-		avatarSavePath := "C:/WEB/static/img/" + data.AvatarURL
-
-		fmt.Println(avatarSavePath)
-
-		avatarImage, err := base64.StdEncoding.DecodeString(data.AuthorImg)
+		err = saveImage(data.HeroName, data.HeroImg)
 		if err != nil {
-			fmt.Println("Ошибка декодирования изображения:", err)
+			http.Error(w, err.Error(), http.StatusBadRequest)
 			return
 		}
-
-		file, err := os.Create(avatarSavePath)
-		if err != nil {
-			fmt.Println("Ошибка создания файла:", err)
-			return
-		}
-		defer file.Close()
-
-		_, err = file.Write(avatarImage)
-		if err != nil {
-			fmt.Println("Ошибка сохранения изображения:", err)
-			return
-		}
-
-		fmt.Println("Изображение успешно сохранено.")
-
-		heroSavePath := "C:/WEB/static/img/" + data.HeroURL
-
-		heroImage, err := base64.StdEncoding.DecodeString(data.HeroImg)
-		if err != nil {
-			fmt.Println("Ошибка декодирования изображения:", err)
-			return
-		}
-
-		file, err = os.Create(heroSavePath)
-		if err != nil {
-			fmt.Println("Ошибка создания файла:", err)
-			return
-		}
-		defer file.Close()
-
-		_, err = file.Write(heroImage)
-		if err != nil {
-			fmt.Println("Ошибка сохранения изображения:", err)
-			return
-		}
-
-		fmt.Println("Изображение успешно сохранено.")
-
 		const query = `
-		INSERT INTO 
-			post (
-				post_id,
-				title,
-				subtitle,
-				content,
-				image_url,
-				image_modifier,
-				publish_date, 
-				author_url, 
-				author, 
-				featured
-			)
-		VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
-		`
+			INSERT INTO 
+				post (
+					title,
+					subtitle,
+					content,
+					image_url,
+					publish_date, 
+					author_url, 
+					author, 
+					featured
+				)
+			VALUES (
+					?,
+					?,
+					?,
+					?,
+					?,
+					?,
+					?,
+					?
+				)
+			`
 
-		_, err = db.Exec(query, newID, data.Title, data.Subtitle, data.Content, "/static/img/"+data.HeroURL, "", data.PublishDate, "static/img/"+data.AvatarURL, data.Author, 0)
+		_, err = db.Exec(
+			query,
+			data.Title,
+			data.Subtitle,
+			data.Content,
+			"/static/img/"+data.HeroName,
+			data.PublishDate,
+			"static/img/"+data.AvatarName,
+			data.Author,
+			0,
+		)
 		if err != nil {
 			http.Error(w, err.Error(), http.StatusInternalServerError)
 			return
 		}
-		var upperPosts []featuredPostData
-
-		db.Select(&upperPosts, query)
 
 		log.Println("Request completed successfully")
-
 	}
+}
+
+func saveImage(imgName string, imageStr string) error {
+	imgSavePath := "static/img/" + imgName
+
+	image, err := base64.StdEncoding.DecodeString(imageStr)
+	if err != nil {
+		fmt.Println("Image decoding error:", err)
+		return err
+	}
+
+	file, err := os.Create(imgSavePath)
+	if err != nil {
+		fmt.Println("File creating error:", err)
+		return err
+	}
+	defer file.Close()
+
+	_, err = file.Write(image)
+	if err != nil {
+		fmt.Println("Image saving error:", err)
+		return err
+	}
+
+	fmt.Println("Image was saved sucсessfully.")
+	return err
 }
 
 func featuredPosts(db *sqlx.DB) ([]featuredPostData, error) {

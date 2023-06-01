@@ -198,47 +198,33 @@ function removeHero() {
   heroImage = "";
 }
 
-function pub() {
-  oops.classList.add("height-44");
-  huzzar.classList.remove("height-44");
-  if (titleField.value == "") {
-    titleError.classList.add("error-appear");
-    titleField.classList.add("error-field");
-  }
-  if (descriptionField.value == "") {
-    descriptionError.classList.add("error-appear");
-    descriptionField.classList.add("error-field");
-  }
-  if (nameField.value == "") {
-    nameError.classList.add("error-appear");
-    nameField.classList.add("error-field");
-  }
-  if (avatarImage == "") {
-    avatarError.classList.add("error-appear");
-  }
-  if (dateField.value == "") {
-    dateError.classList.add("error-appear");
-    dateField.classList.add("error-field");
-  }
-  if (heroImage == "") {
-    heroError.classList.add("error-appear");
-  }
-  if (content.value == "") {
-    contentError.classList.add("error-appear");
-    content.classList.add("error-field");
-  }
-}
-
 function publish() {
-  if (
-    titleField.value != "" &&
-    descriptionField.value != "" &&
-    nameField.value != "" &&
-    dateField.value != "" &&
-    avatarImage != "" &&
-    heroImage != "" &&
-    content.value != ""
-  ) {
+  const fields = [titleField, descriptionField, nameField, dateField, content];
+  const fieldsErrors = [
+    titleError,
+    descriptionError,
+    nameError,
+    dateError,
+    contentError,
+  ];
+  const images = [avatarImage, heroImage];
+  const imagesErrors = [avatarError, heroError];
+  let valFlag = true;
+  for (let i = 0; i < fields.length; i++) {
+    if (fields[i].value == "") {
+      fieldsErrors[i].classList.add("error-appear");
+      fields[i].classList.add("error-field");
+      valFlag = false;
+    }
+    for (let i = 0; i < images.length; i++) {
+      if (images[i] == "") {
+        imagesErrors[i].classList.add("error-appear");
+        valFlag = false;
+      }
+    }
+  }
+
+  if (valFlag) {
     oops.classList.remove("height-44");
     huzzar.classList.add("height-44");
     const post = {
@@ -257,7 +243,5 @@ function publish() {
       method: "POST",
       body: JSON.stringify(post),
     });
-  } else {
-    pub();
   }
 }

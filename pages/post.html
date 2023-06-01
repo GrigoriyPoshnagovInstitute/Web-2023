@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>{{ .Title }}</title>
-    <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/poststyle.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Lora&display=swap"
       rel="stylesheet"
@@ -16,7 +16,7 @@
   <body class="page">
     <header class="heading heading_margin-top">
       <span class="heading__escape heading__escape_color_gray">Escape.</span>
-      <nav class="navigation">
+      <nav class="navigation hide">
         <a
           href="http://localhost:3005/home"
           class="navigation__link navigation__link_color_gray"
@@ -32,21 +32,24 @@
           >CONTACT</a
         >
       </nav>
+      <div class="burger">
+        <div class="strike"></div>
+        <div class="strike"></div>
+        <div class="strike"></div>
+      </div>
     </header>
     <div class="welcome-sheet welcome-sheet_post">
       <h1 class="welcome-sheet__slogan welcome-sheet__slogan_color_gray">
         {{ .Title }}
       </h1>
-      <h2
-        class="welcome-sheet__subtitle welcome-sheet__subtitle_color_gray welcome-sheet__subtitle_post"
-      >
+      <h2 class="welcome-sheet__subtitle welcome-sheet__subtitle_color_gray">
         {{ .Subtitle }}
       </h2>
     </div>
     <img
       src="{{ .ImgModifier }}"
       alt="picture-for-the-article.png"
-      class="the-road-ahead_image"
+      class="post-image"
     />
     <article class="post">
       <p class="post__article-content">{{ .Content }}</p>
@@ -66,17 +69,25 @@
       <div class="basement__overlay">
         <div class="basement__foot">
           <span class="basement__escape basement__escape_white">Escape</span>
-          <nav class="navigation">
-            <a href="#" class="navigation__link navigation__link_color_white"
+          <nav class="navigation column">
+            <a
+              href="#"
+              class="navigation__link navigation__link_color_white dull"
               >HOME</a
             >
-            <a href="#" class="navigation__link navigation__link_color_white"
+            <a
+              href="#"
+              class="navigation__link navigation__link_color_white dull"
               >CATEGORIES</a
             >
-            <a href="#" class="navigation__link navigation__link_color_white"
+            <a
+              href="#"
+              class="navigation__link navigation__link_color_white dull"
               >ABOUT</a
             >
-            <a href="#" class="navigation__link navigation__link_color_white"
+            <a
+              href="#"
+              class="navigation__link navigation__link_color_white dull"
               >CONTACT</a
             >
           </nav>
